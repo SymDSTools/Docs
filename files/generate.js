@@ -3,7 +3,7 @@
 
 const fs = require("fs-extra");
 const path = require("path");
-const rimraf = require("rimraf");
+const { rimraf } = require("rimraf");
 const Prism = require('prismjs');
 const _glob = require('glob');
 /** @type {DSConfig} */
@@ -56,7 +56,7 @@ const D_BASE = 0, D_LANG = 1, D_VER = 2, D_SCOPE = 3;
  */
 function getSrcDir(level, state, file = "") {
     const dir = [state.lang, state.curVer, state.curScope];
-    return baseDir + dir.slice(0, level).join('/') + '/' + file;
+    return rootPath + baseDir + dir.slice(0, level).join('/') + '/' + file;
 }
 
 /**
@@ -69,7 +69,7 @@ function getDstDir(level, state, file = "") {
 }
 
 /** @param {GenPattern} genPattern */
-function Generate(genPattern) {
+async function Generate(genPattern) {
     regHide = RegExp(conf.regHide);
     const state = dfltState;
 
@@ -79,45 +79,50 @@ function Generate(genPattern) {
         Throw(Error(`scope ${genPattern.scope} not specified in conf.json`));
 
     const dstDir = getDstDir(D_BASE, state);
-    if (!app.FolderExists(dstDir)) app.MakeFolder(dstDir);
+    if (!app.FolderExists(dstDir)) await app.MakeFolder(dstDir);
 
     // language index page
     const nav = keys(conf.langs).map(l => newNaviItem(`docs${getl(l)}/Docs.htm`, conf.langs[l]));
     const index = htmlNavi("Available languages:", "", nav.join(''))
         .replace(/(href|src)="(?!http|\/)(?!docs)(\.\.\/)?/g, '$1="docs/')
         .replace(/<script .*forward.js"><\/script>\s+/g, '');
-    app.WriteFile(dstDir + "index.html", index);
+    await app.WriteFile(dstDir + "index.html", index);
 
     // 404 page
-    app.CopyFolder('404.html', dstDir + '404.html');
+    await app.CopyFolder('404.html', dstDir + '404.html');
 
     // update forward.js version map
     /** @type {Obj<string>} */
     const latest = {};
-    const forwardjs = app.ReadFile('docs-base/js/forward.js');
-    keys(conf.langs).map(l => {
-        state.lang = l;
-        const versions = app.ListFolder(getSrcDir(D_LANG, state)).sort();
+    const forwardjs = await app.ReadFile('docs-base/js/forward.js');
+    for (const l in conf.langs) {
+        state.lang = /** @type {LangKeys} */(l);
+        const verDirs = await app.ListFolder(getSrcDir(D_LANG, state));
+        const versions = verDirs.sort();
         latest[state.lang] = versions[versions.length - 1];
-    });
-    app.WriteFile('docs-base/js/forward.js', forwardjs.replace(/(versions = ).*;/, `$1${JSON.stringify(latest)};`));
+    }
+    await app.WriteFile('docs-base/js/forward.js', forwardjs.replace(/(versions = ).*;/, `$1${JSON.stringify(latest)};`));
 
     // generate all languages
-    keys(conf.langs).filter(l => l.match(genPattern.lang) !== null).forEach(l => generateLang(l, state, genPattern));
+    for (const l in conf.langs) {
+        if (l.match(genPattern.lang))
+            await generateLang(/** @type {LangKeys} */(l), state, genPattern);
+    }
 
     // update version number
     const verDate = Date.now() / 864e5 | 0;
-    const verNum = ReadFile("../docs/version.txt", "0").split('.').map(Number);
+    const verStr = await ReadFile("../docs/version.txt", "0");
+    const verNum = verStr.split('.').map(Number);
     if (updateVer) verNum[1] = (verNum[1] | 0) + 1;
     verNum[0] %= 1000;
-    app.WriteFile(outDir + "version.txt", verDate + verNum.join('.'));
+    await app.WriteFile(outDir + "version.txt", verDate + verNum.join('.'));
 
     for (const file of _glob.sync(outDir + '*/*/Docs.htm', { cwd: __dirname })) {
-        const content = app.ReadFile(file)
+        const content = (await app.ReadFile(file))
             .replace(/version.txt: [0-9.]+/, `version.txt: ${verDate + verNum.join('.')}`)
             .replace(/Docs version: [0-9.]*/, `Docs version: ${verNum.join('.')}`)
             .replace(/\(\d\d\/\d\d\/\d\d\d\d\)/, `(${new Date().toLocaleDateString()})`);
-        app.WriteFile(file, content);
+        await app.WriteFile(file, content);
     }
 }
 
@@ -126,7 +131,7 @@ function Generate(genPattern) {
  * @param {GenState} state
  * @param {GenPattern} genPattern
 */
-function generateLang(l, state, genPattern) {
+async function generateLang(l, state, genPattern) {
     state.lang = l;
     const langDir = getSrcDir(D_LANG, state);
     const dstDir = getDstDir(D_LANG, state);
@@ -137,14 +142,14 @@ function generateLang(l, state, genPattern) {
 
     try {
         // update base files
-        if (!app.FolderExists(dstDir)) app.MakeFolder(dstDir);
+        if (!app.FolderExists(dstDir)) await app.MakeFolder(dstDir);
         else console.log("overwriting " + state.lang);
 
-        app.CopyFolder("font-awesome", dstDir + "font-awesome");
-        app.CopyFolder("app.js", dstDir + "app.js");
-        app.CopyFolder("docs-base/css", dstDir + "css");
-        app.CopyFolder("docs-base/js", dstDir + "js");
-        app.CopyFolder("docs-base/Index.htm", dstDir + "index.html");
+        await app.CopyFolder("font-awesome", dstDir + "font-awesome");
+        await app.CopyFolder("app.js", dstDir + "app.js");
+        await app.CopyFolder("docs-base/css", dstDir + "css");
+        await app.CopyFolder("docs-base/js", dstDir + "js");
+        await app.CopyFolder("docs-base/Index.htm", dstDir + "index.html");
     }
     catch (e) {
         console.error(e);
@@ -156,12 +161,16 @@ function generateLang(l, state, genPattern) {
     const index = htmlNavi("Available versions:", "", nav.join(''))
         .replace(/(href|src)="(?!http|\/)(\.\.\/)?/g, '$1="../docs/')
         .replace(/<script .*forward.js"><\/script>\s+/g, '');
-    app.WriteFile(dstDir + "Docs.htm", index);
+    await app.WriteFile(dstDir + "Docs.htm", index);
 
     // generate all versions
-    const versions = app.ListFolder(langDir).sort().filter(v => !v.startsWith("."));
-    // eslint-disable-next-line security/detect-non-literal-regexp
-    for (const v of versions) if (new RegExp(genPattern.ver || '.*').test(v)) generateVersion(v, state, genPattern);
+    const verDirs = await app.ListFolder(langDir);
+    const versions = verDirs.sort().filter(v => !v.startsWith("."));
+    for (const v of versions) {
+        // eslint-disable-next-line security/detect-non-literal-regexp
+        if (new RegExp(genPattern.ver || '.*').test(v))
+            await generateVersion(v, state, genPattern);
+    }
     if (hadError) console.warn("Warning: Copy docs-base failed for docs-" + l + ". Reload VSCode via 'Ctrl+Shift+P > Reload Window' and try again if the preview renders incorrectly.");
 }
 
@@ -170,7 +179,7 @@ function generateLang(l, state, genPattern) {
  * @param {GenState} state
  * @param {GenPattern} genPattern
  */
-function generateVersion(ver, state, genPattern) {
+async function generateVersion(ver, state, genPattern) {
     state.curVer = ver;
     const curDir = getDstDir(D_VER, state);
     let hadError = false;
@@ -178,27 +187,25 @@ function generateVersion(ver, state, genPattern) {
     try {
         if (clear && app.FolderExists(curDir)) {
             console.log(`deleting ${state.lang}/${ver}`);
-            app.DeleteFolder(curDir);
+            await app.DeleteFolder(curDir);
         }
-        app.CopyFolder("docs-base", curDir);
+        await app.CopyFolder("docs-base", curDir);
     }
     catch (e) {
         console.error(e);
         hadError = true;
     }
 
-    app.WriteFile(curDir + "index.txt", "");
+    await app.WriteFile(curDir + "index.txt", "");
 
     // generate all scopes
-    keys(conf.scopes)
-        .filter(s => s.match(genPattern.scope) !== null)
-        .forEach(scopeName => {
-            try { generateScope(scopeName, state, genPattern); }
-            catch (e) {
-                console.error(/*\x1b[31m*/ `while generating ${state.curScope} ${state.curDoc || ''}: ${state.curSubf || ''}`);
-                Throw(e);
-            }
+    const filteredScopes = keys(conf.scopes).filter(s => s.match(genPattern.scope));
+    for (const scopeName of filteredScopes) {
+        await generateScope(scopeName, state, genPattern).catch(e => {
+            console.error(/*\x1b[31m*/ `while generating ${state.curScope} ${state.curDoc || ''}: ${state.curSubf || ''}`);
+            Throw(e);
         });
+    }
 
     if (hadError) console.warn("Warning: Copy docs-base failed for " + ver + ". Reload VSCode via 'Ctrl+Shift+P > Reload Window' and try again if the preview renders incorrectly.");
 }
@@ -208,7 +215,7 @@ function generateVersion(ver, state, genPattern) {
  * @param {GenState} state
  * @param {GenPattern} genPattern
  */
-function generateScope(name, state, genPattern) {
+async function generateScope(name, state, genPattern) {
     state.curScope = name;
     const scopeDir = getSrcDir(D_SCOPE, state);
     const dstDir = getDstDir(D_SCOPE, state);
@@ -217,41 +224,41 @@ function generateScope(name, state, genPattern) {
     if (!app.FolderExists(scopeDir) || !(app.FileExists(scopeDir + "obj.json") || app.FolderExists(scopeDir + "desc")))
         Throw(Error(`'${scopeDir}' doesn't exist.`));
 
-    if (!app.FolderExists(scopeDir + "samples")) app.MakeFolder(scopeDir + "samples");
+    if (!app.FolderExists(scopeDir + "samples")) await app.MakeFolder(scopeDir + "samples");
 
     // check file dates for update
-    if (!force && !clear && newestFileDate(dstDir) > newestFileDate(scopeDir, "generate.js"))
+    if (!force && !clear && await newestFileDate(dstDir) > await newestFileDate(scopeDir, "generate.js"))
         return console.log(`Skipped ${state.lang}.${state.curVer}.${name}.${genPattern.func || '*'}`);
 
     app.ShowProgressBar(`Generating ${state.lang}.${state.curVer}.${name}.${genPattern.func || '*'}`);
-    const inpt = parseInput(state);
+    const inpt = await parseInput(state);
 
     // clear nav & scope folder for generating
     /* if (!clear) {
         const verDir = getDstDir(D_VER, state);
-        if (!"navs".match(regGen)) app.DeleteFolder(dstDir);
-        for (const f of app.ListFolder(verDir))
-            f.startsWith(name + "_") && app.DeleteFile(verDir + f);
+        if (!"navs".match(regGen)) await app.DeleteFolder(dstDir);
+        for (const f of await app.ListFolder(verDir))
+            f.startsWith(name + "_") && await app.DeleteFile(verDir + f);
     } */
-    if (!app.FolderExists(dstDir)) app.MakeFolder(dstDir);
+    if (!app.FolderExists(dstDir)) await app.MakeFolder(dstDir);
 
     // generate nav pages
     if ("navs".match(regGen)) {
-        generateNavigators(inpt.scope, inpt.navs, conf.scopes[state.curScope] || state.curScope, state);
+        await generateNavigators(inpt.scope, inpt.navs, conf.scopes[state.curScope] || state.curScope, state);
         const missNavs = Object.entries(inpt.scope).filter(m => !m[1].hasNav).map(m => m[1].name || m[0]).filter(nothidden);
         if (inpt.base && missNavs.length > 0) console.log(`missing navigators in ${state.curScope}: ${missNavs.join(", ")}\n`);
     }
 
     // generate doc pages
-    generateDocs(inpt, state);
+    await generateDocs(inpt, state);
     return app.HideProgressBar();
 }
 
 /** read all input json files
  * @param {GenState} state
- * @returns {DSInput}
+ * @returns {Promise<DSInput>}
  */
-function parseInput(state) {
+async function parseInput(state) {
     /** @type {DSNavs} */ let navs;
     /** @type {DSBase|null} */ let base = {}, newBase;
     /** @type {DSScope} */ let scope = {}, newScope;
@@ -260,12 +267,12 @@ function parseInput(state) {
     // read categories
     const scopeDir = getSrcDir(D_SCOPE, state);
     state.curDoc = scopeDir + "navs.json";
-    navs = JSON.parse(ReadFile(state.curDoc, "{}"));
+    navs = JSON.parse(await ReadFile(state.curDoc, "{}"));
 
     // read scope members
     state.curDoc = scopeDir + "obj.json";
     if (app.FileExists(state.curDoc)) {
-        newScope = JSON.parse(ReadFile(state.curDoc, "false"));
+        newScope = JSON.parse(await ReadFile(state.curDoc, "false"));
         scope = mergeObject(scope, newScope);
         if (!keys(navs).length) navs = keys(scope);
         // @ts-ignore
@@ -273,20 +280,20 @@ function parseInput(state) {
 
         // read base functions used in scope
         state.curDoc = scopeDir + "base.json";
-        newBase = JSON.parse(ReadFile(state.curDoc, "false"));
+        newBase = JSON.parse(await ReadFile(state.curDoc, "false"));
         base = mergeObject(base, newBase);
         if (base) {
             // additionally, read /*#obj*/ marked functions from .js file if exists
             if (!app.FileExists(scopeDir + state.curScope + ".js")) { baseKeys = keys(base).map(k => base && base[k].name || k); }
             else {
-                baseKeys = app.ReadFile(scopeDir + state.curScope + ".js")
+                baseKeys = (await app.ReadFile(scopeDir + state.curScope + ".js"))
                     .split("/*#obj*/ self.").slice(1)
                     .map((v) => v.slice(0, v.indexOf(" ")));
             }
 
             // additionally, read Obj.prototype functions from utils.js if exists
             if (state.curScope === "app" && app.FileExists(scopeDir + "util.js")) {
-                baseKeys.concat(app.ReadFile(scopeDir + "util.js")
+                baseKeys.concat((await app.ReadFile(scopeDir + "util.js"))
                     .split("Obj.prototype.").slice(1)
                     .map((v) => v.slice(0, v.indexOf(" "))));
             }
@@ -299,7 +306,7 @@ function parseInput(state) {
         // add files from scope folder to be generated
         newScope = {}; base = null; navs = [];
 
-        for (let n of app.ListFolder(scopeDir + "desc")) {
+        for (let n of await app.ListFolder(scopeDir + "desc")) {
             n = n.slice(0, n.lastIndexOf("."));
             navs.push(n.replace(/^\s+/, ""));
             // @ts-ignore
@@ -318,7 +325,7 @@ function parseInput(state) {
  * @param {GenState} state
  * @param {string} [pfx]
  */
-function generateNavigators(scope, navs, name, state, pfx) {
+async function generateNavigators(scope, navs, name, state, pfx) {
     state.curDoc = getDstDir(D_VER, state, `${pfx || ''}${name.replace(/\s+/g, '')}.htm`);
     pfx = `${pfx || state.curScope}_`;
     let nav = '', addcontent = '';
@@ -333,7 +340,7 @@ function generateNavigators(scope, navs, name, state, pfx) {
                 scope[func].hasNav ||= (name !== 'All');
                 nav += newNaviItem(
                     state.curScope + `/${func.replace(/^\d+|\s+/g, '')}.htm`,
-                    func.replace(/^\d+\s*/, ''), getAddClass(scope[func], state));
+                    func.replace(/^\d+\s*/, ''), await getAddClass(scope[func], state));
             }
         }
     }
@@ -355,29 +362,34 @@ function generateNavigators(scope, navs, name, state, pfx) {
                 let f, add = "";
                 if (val.startsWith("http")) add += ' onclick="return OpenUrl(this.href);"';
                 if (m && scope[m[1]]) f = m[3] ? (scope[m[1]].subf || {})[m[3]] : scope[m[1]];
-                if (f && typeof f !== "string") { add += getAddClass(f, state); f.hasNav = true; }
+                if (f && typeof f !== "string") { add += await getAddClass(f, state); f.hasNav = true; }
                 nav += newNaviItem(val, cat, add);
             }
             else // new category
             {
-                nav += newNaviItem(`${pfx + cat.replace(/\s+/g, '')}.htm`, cat, cat === "Premium" ? getAddClass({ desc: "<premium>" }, state) : undefined);
+                nav += newNaviItem(
+                    `${pfx + cat.replace(/\s+/g, '')}.htm`, cat,
+                    cat === "Premium"
+                        ? await getAddClass({ desc: "<premium>" }, state)
+                        : undefined);
                 const tdoc = state.curDoc;
-                generateNavigators(scope, val, cat, state, pfx);
+                await generateNavigators(scope, val, cat, state, pfx);
                 state.curDoc = tdoc;
             }
         }
     }
-    else { Throw(Error("Wrong catlist datatype: " + typeof navs)); }
-
+    else {
+        Throw(Error("Wrong catlist datatype: " + typeof navs));
+    }
     const nofilter = keys(navs).length < 15 || (navs instanceof Object && navs._nofilter);
-    app.WriteFile(state.curDoc, htmlNavi(name, addcontent, nav, !nofilter));
+    await app.WriteFile(state.curDoc, htmlNavi(name, addcontent, nav, !nofilter));
 }
 
 /**
  * @param {DSInput} inpt
  * @param {GenState} state
  */
-function generateDocs(inpt, state) {
+async function generateDocs(inpt, state) {
     state.curDoc = getSrcDir(D_SCOPE, state);
     const lst = keys(inpt.scope).filter(nothidden).filter(n => Boolean(n.match(regGen)));
 
@@ -385,17 +397,17 @@ function generateDocs(inpt, state) {
         state.progress = Math.floor(100 * i / lst.length);
         app.UpdateProgressBar(state.progress, state.curScope + '.' + lst[i]);
         //console.log('\n:'+i+':'+lst[i]+'\n');
-        generateDoc(state, inpt, lst[i]);
+        await generateDoc(state, inpt, lst[i]);
     }
 
     if (!"tips".match(regGen)) return;
 
-    generateTips(inpt);
+    await generateTips(inpt);
     generateTsx(inpt);
 }
 
 /** @param {DSInput} scope */
-function generateTips({ base, scope, state }) {
+async function generateTips({ base, scope, state }) {
     state.curDoc = getSrcDir(D_VER, state, state.curScope + '-tips.json');
     /** @type {DSScopeRaw} */
     let tsubf;
@@ -420,7 +432,7 @@ function generateTips({ base, scope, state }) {
 
     const stips = tos(tips);
     if (stips.lastIndexOf("}") !== 25)
-        app.WriteFile(state.curDoc, stips);
+        await app.WriteFile(state.curDoc, stips);
 }
 
 /**
@@ -447,8 +459,8 @@ function generateTsx(_inpt) {
  * @param {GenState} state
  * @param {DSInput} inpt
  * @param {string} name
- */
-function generateDoc(state, inpt, name) {
+ * @param {GenState} state */
+async function generateDoc(state, inpt, name) {
     state.curFunc = name;
 
     /** @type {DSFunction | string} */
@@ -464,7 +476,7 @@ function generateDoc(state, inpt, name) {
     let data, funcLine = "", subfuncs = "", desc = ps.desc || "";
 
     // get description from external file
-    desc = unwrapDesc(ps.desc, state);
+    desc = await unwrapDesc(ps.desc, state);
     if (ps.desc && !desc) Throw(Error(`description file ${ps.desc.slice(1)} linked but doesn't exist.`));
     ps.desc = desc;
 
@@ -473,7 +485,7 @@ function generateDoc(state, inpt, name) {
         if (dbg) app.UpdateProgressBar(state.progress, state.curScope + '.' + name + " get data");
 
         const m = fillMissingFuncProps(ps);
-        data = getDocData(inpt, m);
+        data = await getDocData(inpt, m);
         desc = m.desc;
 
         // function line with popups
@@ -491,10 +503,10 @@ function generateDoc(state, inpt, name) {
 
     // insert data to html base
     if (dbg) app.UpdateProgressBar(state.progress, state.curScope + '.' + name + " generate description");
-    const html = htmlDoc(name, formatDesc(inpt, state, desc, name, Boolean(data)), subfuncs, funcLine);
+    const html = htmlDoc(name, await formatDesc(inpt, state, desc, name, Boolean(data)), subfuncs, funcLine);
     if (dbg) app.UpdateProgressBar(state.progress, state.curScope + '.' + name + " adjusting");
     const docHtml = adjustDoc(state, html, name);
-    app.WriteFile(state.curDoc, docHtml);
+    await app.WriteFile(state.curDoc, docHtml);
 
     const indexText = docHtml
         .replace(/<div data-role="popup".*?<\/div>/g, "")
@@ -637,11 +649,11 @@ function adjustDoc(state, html, name) {
  * @param {any} name
  * @param {boolean} hasData
  */
-function formatDesc(inpt, state, desc, name, hasData) {
+async function formatDesc(inpt, state, desc, name, hasData) {
     desc = desc.charAt(0).toUpperCase() + desc.slice(1);
 
-    const samplesJs = getSamples(inpt, name);
-    const samplesPy = getSamples(inpt, name, "-py");
+    const samplesJs = await getSamples(inpt, name);
+    const samplesPy = await getSamples(inpt, name, "-py");
     let sampcnt = keys(samplesJs).length;
     if (!has(desc, '.')) desc += '.';
 
@@ -706,7 +718,7 @@ function fillMissingFuncProps(f) {
 /** converts a function object into an html snippets object
  * @param {DSInput} inpt
  * @param {DSMethod} f */
-function getDocData(inpt, f, useAppPop = false) {
+async function getDocData(inpt, f, useAppPop = false) {
     const { base, state } = inpt;
     /** @type {string[]} */
     const mArgs = [];
@@ -780,7 +792,7 @@ function getDocData(inpt, f, useAppPop = false) {
         const args = [];
         let metpop = newPopup(state, "dsc", state.curSubf,
             addMarkdown(replaceTypes(inpt, state, replW(mdesc), true)),
-            getAddClass(m, state) || (has(inpt.baseKeys, state.curSubf) ? ' class="baseFunc"' : ""));
+            await getAddClass(m, state) || (has(inpt.baseKeys, state.curSubf) ? ' class="baseFunc"' : ""));
 
         if (!m.isval) {
             for (i in m.pNames)
@@ -805,12 +817,12 @@ function getDocData(inpt, f, useAppPop = false) {
  * @param {string} func
  * @param {string} ext
  */
-function getSamples({ scope, state }, func, ext = "") {
+async function getSamples({ scope, state }, func, ext = "") {
     /** @type {Obj<Sample>} */
     const samples = {};
     let index = 0;
 
-    const source = ReadFile(getSrcDir(D_SCOPE, state, `samples/${func}${ext}.txt`), " ", !scope[func].isval).replace(/\r/g, '');
+    const source = (await ReadFile(getSrcDir(D_SCOPE, state, `samples/${func}${ext}.txt`), " ", !scope[func].isval)).replace(/\r/g, '');
     source.replace(/<sample( (.*?))?(( |norun)*)>([^]*?)<\/sample\1?>/g,
         (m, py, name, opt, _1, code) => {
             index++;
@@ -873,18 +885,19 @@ function toHtmlSamp(name, jsSample, pySample, state) {
  * @param {string | undefined} desc
  * @param {GenState} state
  */
-function unwrapDesc(desc, state) {
+async function unwrapDesc(desc, state) {
     if (!desc || !desc.startsWith('#')) return desc || '';
-    return ReadFile(getSrcDir(D_SCOPE, state, 'desc/' + desc.slice(1)), "").replace(/\r/g, '');
+    const content = await ReadFile(getSrcDir(D_SCOPE, state, 'desc/' + desc.slice(1)), "");
+    return content.replace(/\r/g, '');
 }
 
 /**
  * @param {DSFunction} m
  * @param {GenState} state
  */
-function getAddClass(m, state) {
+async function getAddClass(m, state) {
     if (!m || typeof m.desc !== "string") return '';
-    const desc = unwrapDesc(m.desc, state);
+    const desc = await unwrapDesc(m.desc, state);
     if (!desc) return '';
 
     if (has(desc, "<deprecated")) return ' class="deprHint"';
@@ -1466,9 +1479,9 @@ function getAbbrev(s) {
  * @param {string} dflt
  * @param {boolean} [write]
  */
-function ReadFile(file, dflt, write) {
-    if (app.FileExists(file)) return app.ReadFile(file);
-    else if (write) app.WriteFile(file, dflt);
+async function ReadFile(file, dflt, write) {
+    if (app.FileExists(file)) return await app.ReadFile(file);
+    else if (write) await app.WriteFile(file, dflt);
     return dflt;
 }
 
@@ -1512,15 +1525,16 @@ function tos(o, intd = "") {
 /**
  * @param {string} p
  * @param {string[]} rest
- * @returns {number}
+ * @returns {Promise<number>}
  */
-function newestFileDate(p, ...rest) {
+async function newestFileDate(p, ...rest) {
     let files;
     if (rest.length) files = [p, ...rest];
     else if (!p.endsWith('/') && app.FileExists(p)) return app.GetFileDate(p).getTime();
     else if (!app.FolderExists(p)) return 0;
-    else files = app.ListFolder(p).map((/** @type {string} */ f) => p + (p.endsWith('/') ? '' : '/') + f);
-    return files.length ? Math.max.apply(null, files.map((f) => newestFileDate(f))) : 0;
+    else files = (await app.ListFolder(p)).map((/** @type {string} */ f) => p + (p.endsWith('/') ? '' : '/') + f);
+    const dates = await Promise.all(files.map((f) => newestFileDate(f)));
+    return files.length ? Math.max.apply(null, dates) : 0;
 }
 
 // ---------------------------- nodejs app wrapper -----------------------------
@@ -1563,13 +1577,13 @@ EXAMPLES:
 function getApp() {
     /** @type {App} */
     const _app = {
-        ReadFile: (p) => fs.readFileSync(absPth(p), "utf8"),
-        WriteFile: (p, s) => fs.writeFileSync(absPth(p), s),
-        DeleteFile: (p) => fs.unlinkSync(absPth(p)),
-        ListFolder: (p) => fs.readdirSync(absPth(p)),
-        MakeFolder: (p) => fs.mkdirSync(absPth(p)),
-        CopyFolder: (a, b) => fs.copySync(absPth(a), absPth(b)),
-        DeleteFolder: (p) => rimraf.sync(absPth(p)),
+        ReadFile: async (p) => await fs.readFile(absPth(p), "utf8"),
+        WriteFile: async (p, s) => await fs.writeFile(absPth(p), s),
+        DeleteFile: async (p) => await fs.unlink(absPth(p)),
+        ListFolder: async (p) => await fs.readdir(absPth(p)),
+        MakeFolder: async (p) => await fs.mkdir(absPth(p)),
+        CopyFolder: async (a, b) => await fs.copy(absPth(a), absPth(b)),
+        DeleteFolder: async (p) => await rimraf(absPth(p)),
         IsFile: (p) => fs.lstatSync(absPth(p)).isFile(),
         IsFolder: (p) => fs.lstatSync(absPth(p)).isDirectory(),
         FileExists: (p) => fs.existsSync(absPth(p)) && fs.lstatSync(absPth(p)).isFile(),
@@ -1585,7 +1599,7 @@ function getApp() {
     return _app;
 }
 
-function main() {
+async function main() {
     let nogen = false, startServer = false, clean = false, addcfg = false;
     /** @type {GenPattern} */
     const genPattern = { ver: "", lang: "", scope: "", func: "" };
@@ -1650,17 +1664,17 @@ function main() {
         const glob = require('glob').sync;
         for (const dir of glob(baseDir + '*/' + conf.version)) {
             console.log(`Deleting ${dir} ...`);
-            app.DeleteFolder(dir);
+            await app.DeleteFolder(dir);
         }
         console.log(`Deleting ${outDir} ...`);
-        app.DeleteFolder(outDir);
+        await app.DeleteFolder(outDir);
         console.log("done.");
         process.exit();
     }
 
-    if (addcfg) app.WriteFile("conf.json", tos(conf));
+    if (addcfg) await app.WriteFile("conf.json", tos(conf));
 
-    if (!nogen) Generate(genPattern);
+    if (!nogen) await Generate(genPattern);
     if (startServer) {
         const express = require('express');
         const server = express();

@@ -3,13 +3,13 @@ import config from "./conf.json";
 declare global {
 
     declare type App = {
-        ReadFile(p: string): string;
-        WriteFile(p: string, s: string): void;
-        DeleteFile(p: string): void;
-        ListFolder(p: string): string[];
-        MakeFolder(p: string): void;
-        CopyFolder(a: string, b: string): void;
-        DeleteFolder(p: string): void;
+        ReadFile(p: string): Promise<string>;
+        WriteFile(p: string, s: string): Promise<void>;
+        DeleteFile(p: string): Promise<void>;
+        ListFolder(p: string): Promise<string[]>;
+        MakeFolder(p: string): Promise<void>;
+        CopyFolder(a: string, b: string): Promise<void>;
+        DeleteFolder(p: string): Promise<boolean>;
         IsFile(p: string): boolean;
         IsFolder(p: string): boolean;
         FileExists(p: string): boolean;

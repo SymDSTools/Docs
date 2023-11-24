@@ -19,12 +19,12 @@
     },
     "dependencies": {
         "esprima-extract-comments": "^1.1.0",
-        "express": "^4.17.2",
-        "fs-extra": "^10.0.0",
+        "express": "^4.18.2",
+        "fs-extra": "^11.1.1",
         "glob": "^10.3.10",
-        "node-fetch": "^2.0",
-        "prismjs": "^1.26.0",
-        "rimraf": "^3.0.2"
+        "node-fetch": "^3.3.2",
+        "prismjs": "^1.29.0",
+        "rimraf": "^5.0.5"
     },
     "devDependencies": {
         "@types/mark.js": "^8.11.8",
