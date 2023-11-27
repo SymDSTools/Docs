@@ -1,5 +1,5 @@
 
-/// <reference path="./types.d.ts"/>
+// <reference path="./types.d.ts"/>
 
 const fs = require("fs-extra");
 const path = require("path");
@@ -12,9 +12,9 @@ const conf = require("./conf.json");
 // prism default languages:
 //   plain,plaintext,text,txt,extend,insertBefore,DFS,markup,
 //   html,mathml,svg,xml,ssml,atom,rss,css,clike,javascript,js
-// @ts-ignore
+// @ts-expect-error load prismjs language
 require('prismjs/components/prism-java.min.js');
-// @ts-ignore
+// @ts-expect-error load prismjs language
 require('prismjs/components/prism-python.min.js');
 
 //TODO:WebServer,WebSocket,WebSocket conn.Ex.,gfx
@@ -201,10 +201,11 @@ async function generateVersion(ver, state, genPattern) {
     // generate all scopes
     const filteredScopes = keys(conf.scopes).filter(s => s.match(genPattern.scope));
     for (const scopeName of filteredScopes) {
-        await generateScope(scopeName, state, genPattern).catch(e => {
-            console.error(/*\x1b[31m*/ `while generating ${state.curScope} ${state.curDoc || ''}: ${state.curSubf || ''}`);
-            Throw(e);
-        });
+        await generateScope(scopeName, state, genPattern)
+            .catch(e => {
+                console.error(/*\x1b[31m*/ `while generating ${state.curScope} ${state.curDoc || ''}: ${state.curSubf || ''}`);
+                Throw(e);
+            });
     }
 
     if (hadError) console.warn("Warning: Copy docs-base failed for " + ver + ". Reload VSCode via 'Ctrl+Shift+P > Reload Window' and try again if the preview renders incorrectly.");
@@ -260,8 +261,8 @@ async function generateScope(name, state, genPattern) {
  */
 async function parseInput(state) {
     /** @type {DSNavs} */ let navs;
-    /** @type {DSBase|null} */ let base = {}, newBase;
-    /** @type {DSScope} */ let scope = {}, newScope;
+    /** @type {DSBase|null} */ let base = {}, newBase = base;
+    /** @type {DSScope} */ let scope = {}, newScope = scope;
     /** @type {string[]} */ let baseKeys = [];
 
     // read categories
@@ -275,7 +276,7 @@ async function parseInput(state) {
         newScope = JSON.parse(await ReadFile(state.curDoc, "false"));
         scope = mergeObject(scope, newScope);
         if (!keys(navs).length) navs = keys(scope);
-        // @ts-ignore
+        // @ts-expect-error assign All keys
         else navs.All = keys(scope);
 
         // read base functions used in scope
@@ -304,12 +305,13 @@ async function parseInput(state) {
     {
         regGen = RegExp("(?=^tips$)[]|(?!^tips$)^.*" + regGen.source);
         // add files from scope folder to be generated
+        // eslint-disable-next-line require-atomic-updates
         newScope = {}; base = null; navs = [];
 
         for (let n of await app.ListFolder(scopeDir + "desc")) {
             n = n.slice(0, n.lastIndexOf("."));
             navs.push(n.replace(/^\s+/, ""));
-            // @ts-ignore
+            // @ts-expect-error md ref
             newScope[n] = `#${n}.md`;
         }
         scope = mergeObject(scope, newScope);
@@ -387,18 +389,28 @@ async function generateNavigators(scope, navs, name, state, pfx) {
 
 /**
  * @param {DSInput} inpt
- * @param {GenState} state
+ * @param {GenState} baseState
  */
-async function generateDocs(inpt, state) {
-    state.curDoc = getSrcDir(D_SCOPE, state);
+async function generateDocs(inpt, baseState) {
+    baseState.curDoc = getSrcDir(D_SCOPE, baseState);
     const lst = keys(inpt.scope).filter(nothidden).filter(n => Boolean(n.match(regGen)));
 
-    for (let i = 0; i < lst.length; i++) {
-        state.progress = Math.floor(100 * i / lst.length);
-        app.UpdateProgressBar(state.progress, state.curScope + '.' + lst[i]);
-        //console.log('\n:'+i+':'+lst[i]+'\n');
-        await generateDoc(state, inpt, lst[i]);
-    }
+    let n = 0;
+    await Promise.all(lst.map(async (name, i) => {
+        /** @type {GenState} */
+        const state = JSON.parse(JSON.stringify(baseState));
+        baseState.progress = Math.floor(100 * ++n / lst.length / 2);
+        app.UpdateProgressBar(baseState.progress, baseState.curScope + '.' + name);
+
+        await generateDoc(state, inpt, name).catch(e => {
+            let info = `while generating files/markup/${state.lang}/${state.curScope}/${state.curFunc}.js ${state.curSubf}`;
+            if (state.curSubf) info += ': ' + state.curSubf;
+            Throw(Error(e.stack + '\n' + info));
+        });
+
+        baseState.progress = Math.floor(100 * ++n / lst.length / 2);
+        app.UpdateProgressBar(baseState.progress, baseState.curScope + '.' + name);
+    }));
 
     if (!"tips".match(regGen)) return;
 
@@ -730,9 +742,10 @@ async function getDocData(inpt, f, useAppPop = false) {
 
     // convert constructor line
     for (i in f.pNames) {
+        const pType = f.pTypes[i];
         if (useAppPop) {
-            // @ts-ignore
-            mArgs.push(newAppPopup(f.pNames[i], typeDesc(f.pTypes[i]))
+            if (typeof pType !== "string") Throw(Error("invalid type"));
+            mArgs.push(newAppPopup(f.pNames[i], typeDesc(inpt, state, pType))
                 .replace(/<\/?\w+?>/g, ""));
         }
         else {
@@ -909,6 +922,7 @@ async function getAddClass(m, state) {
 /** returns a formatted description of a type - used for subfunction return values
  * @param {GenState} state
  * @param {DSInput} inpt
+ * @param {GenState} state
  * @param {string} stypes */
 function typeDesc(inpt, state, stypes) {
     /** @type {{tname: Obj<string>, tdesc: Obj<string>}} */
@@ -946,8 +960,8 @@ function typeDesc(inpt, state, stypes) {
                             Throw(Error("unknown typex " + type[1]));
                         if (inpt.state.curDoc.endsWith(type[2] + ".htm"))
                             return s[i] + type[2];
-                        if (!type[2].startsWith("@") && !inpt.scope[type[2]])
-                            Throw(Error("link required for " + type[2]));
+                        //if (type[2].startsWith("@") && !inpt.scope[type[2]])
+                        //    Throw(Error("link required for " + type[2]));
                         return s[i] + newLink(type[2].replace("@", "") + (type[2].match(/\.\w{2,5}$/) ? "" : ".htm"),
                             type[2].replace(/@.*\/|\.\w{2,5}$/g, "").replace(regConPrefix, ""));
                 }
@@ -1119,6 +1133,9 @@ function replaceTypes(inpt, state, descStr, useAppPop) {
     if (useAppPop) descStr = descStr.replace(/<(style|a)\b.*?>.*?<\/\1>|style=[^>]*/g, '');
     else descStr = descStr.replace(/\s*<[^\s​].*?>/g, (m) => (tags.push(m), `§t${tags.length - 1}§`));
 
+    /** @type {(type:string) => string} */
+    const replSpans = type => type.replace(/§t(\d+)§(<\/span>)?/g, (_m, i, s) => (s || '') + tags[i]);
+
     descStr = descStr.replace(/(\b([\w_.#-]+)|"([^"]*)"):([a-z]{3}(_[a-z]{3})?\b)?-?("(\\"|[^"])*|'(\\'|[^'])*| ?\w(\\[\s\S]|[^.,:”<|}\]])*)?['"]?/g,
         function formatDescType(m, _1, /** @type {string} */ name, /** @type {string} */ aname, /** @type {string} */ type, _2, /** @type {string} */ desc) {
             let r, space = '', tapop = false;
@@ -1144,13 +1161,13 @@ function replaceTypes(inpt, state, descStr, useAppPop) {
                         (tDesc[type] ? ": " + tDesc[type] : "") : desc.replace(/\\n|\n/g, '$n$'));
                 }
             }
-            else if (type) { r = toArgPop(inpt, state, name, type.replace(/§t(\d+)§(<\/span>)?/g, (_m, i, s) => (s || '') + tags[i])); }
-            else { r = newPopup(state, "dsc", name, desc.replace(/§t(\d+)§(<\/span>)?/g, (_m, i, s) => (s || '') + tags[i])); }
+            else if (type) { r = toArgPop(inpt, state, name, replSpans(type)); }
+            else { r = newPopup(state, "dsc", name, replSpans(desc)); }
 
             return r + space;
         }
     );
-    return descStr.replace(/§t(\d+)§(<\/span>)?/g, (m, i, s) => (s || '') + tags[i]);
+    return replSpans(descStr);
 }
 
 /** convert markdown symbols to html
@@ -1438,9 +1455,9 @@ function nothidden(name) { return !hidden(name); }
 function isnum(c) { return c >= '0' && c <= '9'; }
 /** @type {(l:string|string[], v:string) => boolean} */
 function has(l, v) { return Boolean(l) && l.indexOf(v) > -1; }
-/** @ts-ignore @type {<T extends object>(O: T) => T[keyof T][]} */
+/** @type {<T extends object>(O: T) => T[keyof T][]} */
 // function values(o) { return Object.values(o); }
-/** @ts-ignore @type {<T>(O: T) => (Extract<keyof T, string>)[]} */
+/** @ts-expect-error @type {<T extends {}>(O: T) => (Extract<keyof T, string>)[]} */
 function keys(o) { return Object.keys(o); }
 /**
  * @param {any} a
@@ -1480,7 +1497,7 @@ function getAbbrev(s) {
  * @param {boolean} [write]
  */
 async function ReadFile(file, dflt, write) {
-    if (app.FileExists(file)) return await app.ReadFile(file);
+    if (app.FileExists(file)) return app.ReadFile(file);
     else if (write) await app.WriteFile(file, dflt);
     return dflt;
 }
@@ -1577,13 +1594,13 @@ EXAMPLES:
 function getApp() {
     /** @type {App} */
     const _app = {
-        ReadFile: async (p) => await fs.readFile(absPth(p), "utf8"),
-        WriteFile: async (p, s) => await fs.writeFile(absPth(p), s),
-        DeleteFile: async (p) => await fs.unlink(absPth(p)),
-        ListFolder: async (p) => await fs.readdir(absPth(p)),
-        MakeFolder: async (p) => await fs.mkdir(absPth(p)),
-        CopyFolder: async (a, b) => await fs.copy(absPth(a), absPth(b)),
-        DeleteFolder: async (p) => await rimraf(absPth(p)),
+        ReadFile: (p) => fs.readFile(absPth(p), "utf8"),
+        WriteFile: (p, s) => fs.writeFile(absPth(p), s),
+        DeleteFile: (p) => fs.unlink(absPth(p)),
+        ListFolder: (p) => fs.readdir(absPth(p)),
+        MakeFolder: (p) => fs.mkdir(absPth(p)),
+        CopyFolder: (a, b) => fs.copy(absPth(a), absPth(b)),
+        DeleteFolder: (p) => rimraf(absPth(p)),
         IsFile: (p) => fs.lstatSync(absPth(p)).isFile(),
         IsFolder: (p) => fs.lstatSync(absPth(p)).isDirectory(),
         FileExists: (p) => fs.existsSync(absPth(p)) && fs.lstatSync(absPth(p)).isFile(),
@@ -1629,14 +1646,14 @@ async function main() {
                 if (pat.length !== 3) Throw(Error("missing option args. expected <code> <name>"));
                 if (pat[1].length !== 2) Throw(Error("state.lang code must have 2 digits"));
                 addcfg = true;
-                //@ts-ignore
+                // @ts-expect-error lang pattern
                 conf.langs[pat[1]] = pat[2];
                 break;
             case "-as": case "--addscope":
                 if (pat.length < 3) Throw(Error("missing option args. expected <code> <name>"));
                 if (pat[1].length < 3) Throw(Error("scope code must have at least 3 digits"));
                 addcfg = true;
-                //@ts-ignore
+                // @ts-expect-error scope pattern
                 conf.scopes[pat[1]] = pat[2];
                 break;
             case "-av": case "--addversion":

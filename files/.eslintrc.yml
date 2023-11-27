@@ -1,24 +1,14 @@
 env: { commonjs: true, node: true, es6: true }
-#  plugins: [prettier]
 extends:
   - eslint:recommended
   - plugin:node/recommended
   - plugin:security/recommended
+  - plugin:@typescript-eslint/recommended
+parser: '@typescript-eslint/parser'
 parserOptions: { ecmaVersion: 2022, project: "files/jsconfig.json" }
-ignorePatterns: markup/
+plugins: ['@typescript-eslint']
+ignorePatterns: [markup/, '*.d.ts']
 rules:
-  # prettier/prettier:
-  #   [
-  #     error,
-  #     {
-  #       printWidth: 100,
-  #       tabWidth: 4,
-  #       singleQuote: true,
-  #       bracketSameLine: false,
-  #       arrowParens: avoid,
-  #     },
-  #   ]
-
   no-unused-vars:
     [
       warn,
@@ -80,7 +70,6 @@ rules:
   operator-assignment: [warn, always]
   prefer-const: warn
   prefer-rest-params: warn
-  require-await: error
   yoda: [warn, never, { exceptRange: true }]
 
   array-bracket-spacing: [warn, never]
@@ -124,11 +113,16 @@ rules:
   security/detect-child-process: off
   security/detect-unsafe-regex: off
 
-  # "@typescript-eslint/no-var-requires": off
-  # "@typescript-eslint/no-unused-vars": off
-  # "@typescript-eslint/ban-ts-comment": [warn, {ts-ignore: allow-with-description}]
-  # "@typescript-eslint/triple-slash-reference": [error, {path: always}]
-  # "@typescript-eslint/no-this-alias": off
+  require-await: off
+  no-return-await: off
+
+  '@typescript-eslint/await-thenable': error
+  '@typescript-eslint/require-await': error
+  '@typescript-eslint/return-await': [error, in-try-catch]
+  '@typescript-eslint/no-floating-promises': error
+  '@typescript-eslint/no-var-requires': off
+  '@typescript-eslint/no-unused-vars': off
+  '@typescript-eslint/no-misused-promises': error
 
   # "@typescript-eslint/unbound-method": off
   # "@typescript-eslint/no-unsafe-return": off
