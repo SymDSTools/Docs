@@ -317,7 +317,7 @@ async function parseInput(state) {
         scope = mergeObject(scope, newScope);
     }
 
-    return { navs, scope, base, baseKeys, state };
+    return { navs, scope, base, baseKeys };
 }
 
 /**
@@ -389,37 +389,41 @@ async function generateNavigators(scope, navs, name, state, pfx) {
 
 /**
  * @param {DSInput} inpt
- * @param {GenState} baseState
+ * @param {GenState} genState
  */
-async function generateDocs(inpt, baseState) {
-    baseState.curDoc = getSrcDir(D_SCOPE, baseState);
+async function generateDocs(inpt, genState) {
+    genState.curDoc = getSrcDir(D_SCOPE, genState);
     const lst = keys(inpt.scope).filter(nothidden).filter(n => Boolean(n.match(regGen)));
+    const stateStr = JSON.stringify(genState);
 
     let n = 0;
-    await Promise.all(lst.map(async (name, i) => {
+    await Promise.all(lst.map(async (name) => {
         /** @type {GenState} */
-        const state = JSON.parse(JSON.stringify(baseState));
-        baseState.progress = Math.floor(100 * ++n / lst.length / 2);
-        app.UpdateProgressBar(baseState.progress, baseState.curScope + '.' + name);
+        const docState = JSON.parse(stateStr);
+        genState.progress = Math.floor(100 * ++n / lst.length / 2);
+        app.UpdateProgressBar(genState.progress, genState.curScope + '.' + name);
 
-        await generateDoc(state, inpt, name).catch(e => {
-            let info = `while generating files/markup/${state.lang}/${state.curScope}/${state.curFunc}.js ${state.curSubf}`;
-            if (state.curSubf) info += ': ' + state.curSubf;
+        await generateDoc(docState, inpt, name).catch(e => {
+            let info = `while generating files/markup/${docState.lang}/${docState.curScope}/${docState.curFunc}.js ${docState.curSubf}`;
+            if (docState.curSubf) info += ': ' + docState.curSubf;
             Throw(Error(e.stack + '\n' + info));
         });
 
-        baseState.progress = Math.floor(100 * ++n / lst.length / 2);
-        app.UpdateProgressBar(baseState.progress, baseState.curScope + '.' + name);
+        genState.progress = Math.floor(100 * ++n / lst.length / 2);
+        app.UpdateProgressBar(genState.progress, genState.curScope + '.' + name);
     }));
 
     if (!"tips".match(regGen)) return;
 
-    await generateTips(inpt);
+    await generateTips(inpt, genState);
     generateTsx(inpt);
 }
 
-/** @param {DSInput} scope */
-async function generateTips({ base, scope, state }) {
+/**
+ * @param {DSInput} scope
+ * @param {GenState} state
+ */
+async function generateTips({ base, scope }, state) {
     state.curDoc = getSrcDir(D_VER, state, state.curScope + '-tips.json');
     /** @type {DSScopeRaw} */
     let tsubf;
@@ -497,7 +501,7 @@ async function generateDoc(state, inpt, name) {
         if (dbg) app.UpdateProgressBar(state.progress, state.curScope + '.' + name + " get data");
 
         const m = fillMissingFuncProps(ps);
-        data = await getDocData(inpt, m);
+        data = await getDocData(inpt, state, m);
         desc = m.desc;
 
         // function line with popups
@@ -664,8 +668,8 @@ function adjustDoc(state, html, name) {
 async function formatDesc(inpt, state, desc, name, hasData) {
     desc = desc.charAt(0).toUpperCase() + desc.slice(1);
 
-    const samplesJs = await getSamples(inpt, name);
-    const samplesPy = await getSamples(inpt, name, "-py");
+    const samplesJs = await getSamples(inpt.scope, state, name);
+    const samplesPy = await getSamples(inpt.scope, state, name, "-py");
     let sampcnt = keys(samplesJs).length;
     if (!has(desc, '.')) desc += '.';
 
@@ -694,9 +698,9 @@ async function formatDesc(inpt, state, desc, name, hasData) {
         .replace(/\s*<br>\s*/g, "<br>\n\t\t")
         // expandable samples (per <sample name> tag or add to desc)
         .replace(/<sample (.*?)>/g, (m, /** @type {string} */ t) =>
-            `</p>\n\t\t${toHtmlSamp(t, samplesJs[t], samplesPy[t], inpt.state) + (delete samplesJs[t], '')}<p>`)
+            `</p>\n\t\t${toHtmlSamp(t, samplesJs[t], samplesPy[t], state) + (delete samplesJs[t], '')}<p>`)
         .replace(/(“.*?”)/g, "<docstr>$1</docstr>")
-        + keys(samplesJs).map(t => toHtmlSamp(t, samplesJs[t], samplesPy[t], inpt.state)).join("");
+        + keys(samplesJs).map(t => toHtmlSamp(t, samplesJs[t], samplesPy[t], state)).join("");
 }
 
 /**
@@ -729,9 +733,10 @@ function fillMissingFuncProps(f) {
 
 /** converts a function object into an html snippets object
  * @param {DSInput} inpt
+ * @param {GenState} state
  * @param {DSMethod} f */
-async function getDocData(inpt, f, useAppPop = false) {
-    const { base, state } = inpt;
+async function getDocData(inpt, state, f, useAppPop = false) {
+    const { base } = inpt;
     /** @type {string[]} */
     const mArgs = [];
     let i, fretval = "";
@@ -826,11 +831,12 @@ async function getDocData(inpt, f, useAppPop = false) {
 }
 
 /** read and return html converted example snippets file
- * @param {DSInput} inpt
+ * @param {DSScope} scope
+ * @param {GenState} state
  * @param {string} func
  * @param {string} ext
  */
-async function getSamples({ scope, state }, func, ext = "") {
+async function getSamples(scope, state, func, ext = "") {
     /** @type {Obj<Sample>} */
     const samples = {};
     let index = 0;
@@ -958,7 +964,7 @@ function typeDesc(inpt, state, stypes) {
                     default:
                         if (!type[0].endsWith("o"))
                             Throw(Error("unknown typex " + type[1]));
-                        if (inpt.state.curDoc.endsWith(type[2] + ".htm"))
+                        if (state.curDoc.endsWith(type[2] + ".htm"))
                             return s[i] + type[2];
                         //if (type[2].startsWith("@") && !inpt.scope[type[2]])
                         //    Throw(Error("link required for " + type[2]));
@@ -1043,7 +1049,7 @@ function toArgPop(inpt, state, name, stypes, doSwitch) {
                 default:
                     if (!type[0].endsWith("o"))
                         Throw(Error("unknown typex " + type[1]));
-                    if (inpt.state.curDoc.endsWith(type[2] + ".htm"))
+                    if (state.curDoc.endsWith(type[2] + ".htm"))
                         return s2[i] + type[2];
                     if (!type[2].startsWith("@") && !inpt.scope[type[2]])
                         Throw(Error("link required for " + type[2]));
@@ -1161,8 +1167,8 @@ function replaceTypes(inpt, state, descStr, useAppPop) {
                         (tDesc[type] ? ": " + tDesc[type] : "") : desc.replace(/\\n|\n/g, '$n$'));
                 }
             }
-            else if (type) { r = toArgPop(inpt, state, name, replSpans(type)); }
-            else { r = newPopup(state, "dsc", name, replSpans(desc)); }
+            else if (type) { r = toArgPop(inpt, state, name, type.replace(/§t(\d+)§(<\/span>)?/g, (_m, i, s) => (s || '') + tags[i])); }
+            else { r = newPopup(state, "dsc", name, desc.replace(/§t(\d+)§(<\/span>)?/g, (_m, i, s) => (s || '') + tags[i])); }
 
             return r + space;
         }
