@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CreateMaterial3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" id="themeJQ" href="../css/themes/default/theme-dark.min.css"/>
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile.structure-1.2.0.min.css"/>
+	<link rel="stylesheet" id="themePrism" href="../css/themes/prism/dark.min.css"/>
+	<link rel="stylesheet" id="themeDocs" href="../css/docs-dark.min.css"/>
+
+	<script src="../js/forward.js"></script>
+	<script src="../js/energize-min.js"></script>
+	<script src="../js/jquery-1.8.1.min.js"></script>
+	<script src="../js/jquery.mark.es6.min.js"></script>
+	<script src="../../app.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/example.js"></script>
+	<script src="../js/jquery.mobile-1.2.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+		<h1>CreateMaterial3</h1>
+		<div class="ui-btn-right" style="font-size:50%">
+			<a class="code-js" data-role="button" data-inline="true" data-mini="true" onclick="tglMode()">JS</a>
+			<a class="code-py" data-role="button" data-inline="true" data-mini="true" onclick="tglMode()">Py</a>
+			<a data-icon="gear" data-role="button" data-inline="true" data-mini="true" data-iconpos="notext" onclick="tglTheme()"></a>
+		</div>
+	</div>
+
+	<div style="position:fixed; top:40px; width:100%; text-align:center; z-index:1101;">
+		<div id="appPopup" class="androidPopup">Hello World</div>
+	</div>
+
+	<div data-role="content">
+
+		<div class="samp samp-inline" style="font-size:revert; padding:10px 15px">
+		<b>Content:</b><br>
+		<span style="display:inline-block;padding-left:1em;">
+			• <a href="" onclick="jumpTo('Material3 Color Schemes & Icons')">Material3 Color Schemes & Icons</a><br>
+			<span style="display:inline-block;padding-left:1em;">
+				- <a href="" onclick="jumpTo('Methods')">Methods</a><br>
+			</span><br>
+		</span><br>
+		</div>
+
+		<p><img style="width:100%" src="../Material3.png"><br>
+		<br>
+		Welcome To Material3 Documentation, this plugin is built using DroidScript native controls.<br>
+		<br>
+		This plugin also uses the following ::<br>
+		<br>
+		<span style="display:inline-block;padding-left:1em;">
+			- Material Design 2 By H.Jumar<br>
+		</span><br>
+		<br>
+		This plugin was ported by :: Oarabile Koore<br>
+		<br>
+		<a href="index.html" data-ajax="false">The Following Are Contributors List To The Project</a></p>
+		<h2>Material3 Color Schemes & Icons</h2>
+		<p>Material Design 3 has a new way of handling colors, and how they are implemented, so as of current Droidscript cannot use dynamic theming so its not an option:<br>
+		Firstly you must have your own color pallets to obtain this, go to this url and customize your apps palletes:<br>
+		<br>
+		<a href="https://m3.material.io/theme-builder#/custom" onclick="return OpenUrl(this.href);">Material Custom Color Builder</a><br>
+		<span style="display:inline-block;padding-left:1em;">
+			1. remember use the custom theme toggle.<br>
+			2. remember under ‘Extend Colors’, this will not theme your app at all,stick to core colors.<br>
+		</span><br>
+		<br>
+		After getting your palletes done, you have to export the theme, you will export the theme as ‘Android Views’.<br>
+		<br>
+		This will download a zip file, To setup your apps light theme follow the directory:<br>
+		<br>
+		<i>Downloads > material-theme > values > colors.xml</i><br>
+		<br>
+		You will now have to change XML to JSON, use any converter.<br>
+		<br>
+		For example: <a href="https://jsonformatter.org/xml-to-json" onclick="return OpenUrl(this.href);">Online XML to JSON Converter</a><br>
+		<br>
+		Make this file and place it in your app directory in the <kbd>uxDesign</kbd> folder that you will create for your app, save the file as <kbd>appTheme.json</kbd>.<br>
+		The resulting path should be<br>
+		<span class="samp samp-inline">uxDesign/appTheme.json</span><br>
+		<br>
+		JSON is faster and we want speed, I could use XML, but I want it fast.<br>
+		<br>
+		Load The Plugin First ::<br>
+		<js>app.LoadPlugin('Material3')<js><br>
+		<br>
+		In your code, to initialize colors, write the following code:.</p>
+
+		<div class="samp">
+		mat3 = app.CreateMaterial3(
+			<a href="#pop_str_001" data-transition="pop" data-rel="popup">theme?</a>,
+			<a href="#pop_str_002" data-transition="pop" data-rel="popup">icon?</a>,
+			<a href="#pop_str_003" data-transition="pop" data-rel="popup">dir=dflt</a> )
+			→ <b>plugin object:</b> Material3
+		</div>
+
+
+		<div data-role="collapsible" data-collapsed="true" data-mini="true" data-theme="a" data-content-theme="a">
+			<h3>Example - Demo</h3>
+			<div id="examp1" class="code-js" style="font-size:70%">
+				<span class="token comment">// Always Have The cfg.MUI option as the plugin relies on it.</span><br>
+				<span class="token comment">// cfg.MUI</span><br>
+				app<span class="token punctuation">.</span><span class="token function">LoadPlugin</span><span class="token punctuation">(</span><span class="token string">'Material3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+				<br>
+				<span class="token keyword">function</span> <span class="token function">OnStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><br>
+				    app<span class="token punctuation">.</span><span class="token function">CreateMaterial3</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">,</span><span class="token string">'outline'</span><span class="token punctuation">,</span><span class="token string">'dflt'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+				    lay <span class="token operator">=</span> ui<span class="token punctuation">.</span><span class="token function">addLayout</span><span class="token punctuation">(</span><span class="token string">'Linear,'</span>FillXY'<span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+				    app<span class="token punctuation">.</span><span class="token function">AddLayout</span><span class="token punctuation">(</span>lay<span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+				<span class="token punctuation">}</span>
+			</div>
+			<div id="examp1" class="code-py" style="font-size:70%">
+				<span class="token comment">#  Always Have The cfg.MUI option as the plugin relies on it.</span><br>
+				<span class="token comment">#  cfg.MUI</span><br>
+				app<span class="token punctuation">.</span>LoadPlugin<span class="token punctuation">(</span><span class="token string">'Material3'</span><span class="token punctuation">)</span><br>
+				<br>
+				<span class="token keyword">def</span> <span class="token function">OnStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>
+				    app<span class="token punctuation">.</span>CreateMaterial3<span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">,</span><span class="token string">'outline'</span><span class="token punctuation">,</span><span class="token string">'dflt'</span><span class="token punctuation">)</span><br>
+				    lay <span class="token operator">=</span> ui<span class="token punctuation">.</span>addLayout<span class="token punctuation">(</span><span class="token string">'Linear,'</span>FillXY'<span class="token punctuation">)</span><br>
+				    app<span class="token punctuation">.</span>AddLayout<span class="token punctuation">(</span>lay<span class="token punctuation">)</span>
+			</div>
+			<div name="divCopy" align="right">
+			<a href="#" data-role="button" data-mini="true" data-inline="true" onclick="copy( 'examp1' )">Copy All</a>
+			<a href="#" data-role="button" data-mini="true" data-inline="true" onclick="demo( 'examp1' )">      Run      </a>
+			</div>
+		</div>
+
+		<h3>Methods</h3>
+		<p>The following methods are available on the <strong>Material3</strong> object:</p>
+
+		<div class="samp">
+			<a href="#pop_dsc_001" data-transition="pop" data-rel="popup">GetType</a>() → <b>String:</b> <docstr>“Material3”</docstr>
+		</div>
+
+	</div>
+
+	<div data-role="popup" id="pop_str_001" class="ui-content"><b>String:</b> <docstr>“default theme”</docstr></div>
+	<div data-role="popup" id="pop_str_002" class="ui-content"><b>String:</b> <docstr>“sharp”</docstr> or <docstr>“round”</docstr> or <docstr>“outline”</docstr> or <docstr>“two-tone”</docstr></div>
+	<div data-role="popup" id="pop_str_003" class="ui-content"><b>String:</b> <i>path to file or folder ( <docstr>“/absolute/...”</docstr> or <docstr>“relative/...”</docstr> ):</i> <docstr>“appTheme.json location”</docstr></div>
+	<div data-role="popup" id="pop_dsc_001" class="ui-content"><b>mat3.GetType</b><br>Get type</div>
+</div>
+</body>
+
+</html>
