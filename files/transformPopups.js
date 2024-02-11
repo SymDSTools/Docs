@@ -14,6 +14,7 @@ const types = {
     Array: "lst",
     Any: "all",
     AppObject: "dso",
+    PluginObject: "plo",
     GameObject: "gvo",
     JSObject: "jso",
     SmartWatchObject: "swo",

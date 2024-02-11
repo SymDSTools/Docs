@@ -287,12 +287,12 @@ function generateDocs(inpt, state) {
         if (inpt.base && missNavs.length > 0) console.log(`missing navigators in ${state.curScope}: ${missNavs.join(", ")}\n`);
     }
 
-    if (makeTips && "tips".match(regGen) && state.curScope !== "global") {
+    if (makeTips && "tips".match(regGen) && !"global,plugins".includes(state.curScope)) {
         resetGlobals(state);
         generateTips(inpt, state);
     }
 
-    if (makeMd && "md".match(regGen)) {
+    if (makeMd && "md".match(regGen) && !"plugins".includes(state.curScope)) {
         resetGlobals(state);
         generateMarkdown(inpt, state);
     }

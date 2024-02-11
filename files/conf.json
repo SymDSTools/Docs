@@ -5,7 +5,8 @@
 		"gfx": "Game Engine",
 		"MUI": "Material UI",
 		"ui": "Hybrid UI",
-		"global": "Global Helpers"
+		"global": "Global Helpers",
+		"plugins": "Plugin Docs"
 	},
 	"langs": {
 		"en": "English"
@@ -18,6 +19,7 @@
 		"all": "all types",
 		"bin": "Boolean",
 		"dso": "app object",
+		"plo": "plugin object",
 		"gvo": "game object",
 		"muo": "MUI object",
 		"jso": "JavaScript object",

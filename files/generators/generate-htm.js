@@ -78,7 +78,8 @@ function generateDoc(state, inpt, name) {
         else {
             if (m.abbrev && m.abbrev !== m.name) funcLine = m.abbrev + " = ";
             const isGlob = m.subf && state.curScope !== "MUI" && typeof m.retval === "string" && m.retval?.startsWith("obj");
-            if (state.curScope !== "global") funcLine += isGlob ? 'new ' : state.curScope + '.';
+            if (state.curScope === "plugins") funcLine += isGlob ? 'new ' : 'app.';
+            else if (state.curScope !== "global") funcLine += isGlob ? 'new ' : state.curScope + '.';
             funcLine += `${m.name}` + (m.isval ? '' : `(${data.args})`) + data.ret;
         }
 
@@ -106,14 +107,16 @@ function generateDoc(state, inpt, name) {
     const docHtml = adjustDoc(state, html, ps.name);
     app.WriteFile(state.curDoc, docHtml);
 
-    const indexText = docHtml
-        .replace(/<div data-role="popup".*?<\/div>/g, "")
-        .replace(/<[^>]+>/g, "")
-        .replace(/(\s+|&[a-z]{2,6};)+/g, " ");
-    const verDir = getDstDir(D_VER, state);
-    const indexFile = getDstDir(D_VER, state, "index.txt");
-    fs.appendFileSync(indexFile, `${state.curDoc.replace(verDir, "").replace(/\\/g, '/')} := `);
-    fs.appendFileSync(indexFile, indexText.trim() + '\n');
+    if (state.curScope !== "plugins") {
+        const indexText = docHtml
+            .replace(/<div data-role="popup".*?<\/div>/g, "")
+            .replace(/<[^>]+>/g, "")
+            .replace(/(\s+|&[a-z]{2,6};)+/g, " ");
+        const verDir = getDstDir(D_VER, state);
+        const indexFile = getDstDir(D_VER, state, "index.txt");
+        fs.appendFileSync(indexFile, `${state.curDoc.replace(verDir, "").replace(/\\/g, '/')} := `);
+        fs.appendFileSync(indexFile, indexText.trim() + '\n');
+    }
 
     if (dbg) app.UpdateProgressBar(state.progress, state.curScope + '.' + name + " done");
 }
@@ -250,7 +253,7 @@ function formatDesc(inpt, state, desc, hasData) {
         (m, _, py, title, opt, _1, code) => {
             sampcnt++;
             title = title || sampcnt + 1;
-            (py.includes('Python') ? samplesPy : samplesJs)[title] =
+            (py?.includes('Python') ? samplesPy : samplesJs)[title] =
                 { code, name: title, index: sampcnt, opt };
             return `<sample ${title}>`;
         });

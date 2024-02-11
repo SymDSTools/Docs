@@ -24,6 +24,7 @@ const tsxTypes = {
     all: "any",
     nil: "void",
     dso: "AppObject",
+    plo: "PluginObject",
     gvo: "GameObject",
     glo: "GLViewObject",
     glo_img: "{ width:num_int, height:num_int }",
@@ -32,7 +33,7 @@ const tsxTypes = {
 };
 
 /** @type {Obj<string>} */
-const objPfx = { app: "Ds", global: "Ds", dso: "Ds", ui: "UI", uio: "UI", MUI: "Mui", muo: "Mui", gfx: "Gfx", gvo: "Gfx" };
+const objPfx = { app: "Ds", global: "Ds", dso: "Ds", ui: "UI", uio: "UI", MUI: "Mui", muo: "Mui", gfx: "Gfx", gvo: "Gfx", "plugins": "Ds", plo: "Ds", };
 
 /** @type {{tname: Obj<string>, tdesc: Obj<string>}} */
 const { tname: tName, tdesc: tDesc } = conf;
