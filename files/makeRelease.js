@@ -1,5 +1,5 @@
 const { execSync } = require('child_process');
-const { renameSync } = require('fs');
+const fs = require('fs');
 const readline = require('readline');
 
 const owner = "DroidScript", repo = "Docs";
@@ -18,7 +18,7 @@ try {
         execSync(`zip -r ${cwd}/file.zip .`);
     }
     process.chdir(cwd);
-    renameSync("file.zip", zipFileName);
+    fs.renameSync("file.zip", zipFileName);
     console.log('Created ' + cwd + "/" + zipFileName);
 } catch (e) {
 }
@@ -30,6 +30,8 @@ if (!process.argv.includes("-u")) process.exit();
 let tagName = process.env.RELEASE_TAG;
 let token = process.env.GITHUB_TOKEN;
 
+if (fs.existsSync('github.key')) token = fs.readFileSync('github.key', 'utf8');
+
 // If token is not provided in environment, prompt for it
 const rl = readline.createInterface({
     input: process.stdin,
@@ -39,7 +41,7 @@ const rl = readline.createInterface({
 rl.question("Enter the release tag: ", (inptTagName) => {
     tagName = inptTagName.trim();
     if (!tagName) return;
-    if (token) { startProcess(); return; }
+    if (token) { rl.close(); startProcess(); return; }
 
     rl.question("Enter your GitHub access token: ", (inptToken) => {
         token = inptToken.trim();
@@ -52,16 +54,28 @@ function startProcess() {
 
     // Get SHA of the latest commit
     const commitSHA = execSync('git rev-parse HEAD').toString().trim();
+    const data = {
+        tag_name: tagName,
+        target_commitish: commitSHA,
+        name: tagName,
+        body: "Release description",
+        draft: false,
+        prerelease: false,
+        generate_release_notes: false
+    };
 
     // Create release
     const releaseResponse = execSync(`curl -X POST \
         -H "Authorization: token ${token}" \
         -H "Content-Type: application/json" \
-        -H "Accept: application/vnd.github.v3+json" \
-        -d '{"tag_name": "${tagName}", "target_commitish": "${commitSHA}", "name": "${tagName}", "body": "Release description here", "draft": false, "prerelease": false}' \
+        -d "${JSON.stringify(data).replace(/"/g, '\\"')}" \
         "https://api.github.com/repos/${owner}/${repo}/releases"`);
 
     const releaseData = JSON.parse(releaseResponse.toString());
+    if (!releaseData.id) {
+        console.error("Error:", releaseData);
+        return;
+    }
 
     // Upload zip file as an asset to the release
     const uploadResponse = execSync(`curl -X POST \
@@ -71,5 +85,7 @@ function startProcess() {
         --data-binary "@${zipFileName}" \
         "https://uploads.github.com/repos/${owner}/${repo}/releases/${releaseData.id}/assets?name=${zipFileName}"`);
 
-    console.log('Release uploaded successfully!');
+    const uploadRes = JSON.parse(uploadResponse.toString());
+    delete uploadRes.uploader;
+    console.log(`Release uploaded`, uploadRes);
 }
