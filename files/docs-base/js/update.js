@@ -19,6 +19,7 @@ function HttpRequest(method, host, path, header, cb) {
     xmlHttp.send();
 }
 
+const deleteOld = false;
 const tmpPath = "/sdcard/.DroidScript/Temp";
 const docsPath = "/sdcard/DroidScript/.edit/";
 const repos = { release: "DroidScript", beta: "SymDSTools" }
@@ -111,11 +112,14 @@ function ExtractLang(file) {
     if (!app.FolderExists(sourceDir))
         return app.ShowPopup("Latest not found.");
 
-    // app.ShowProgress("Removing old " + name);
-    // app.ListFolder(sourceDir).forEach(function (d) { app.DeleteFolder(docsPath + name + "/" + d) });
+    if (deleteOld) {
+        app.ShowProgress("Removing old " + name);
+        app.ListFolder(sourceDir).forEach(function (d) { app.DeleteFolder(docsPath + name + "/" + d) });
+    }
 
+    const operation = deleteOld ? "RenameFolder" : "CopyFolder";
     app.ShowProgress("Copying new " + name);
-    app.ListFolder(sourceDir).forEach(function (d) { app.RenameFolder(sourceDir + "/" + d, docsPath + name + "/" + d) });
+    app.ListFolder(sourceDir).forEach(function (d) { app[operation](sourceDir + "/" + d, docsPath + name + "/" + d, true) });
     Updated();
 }
 

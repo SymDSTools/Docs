@@ -103,7 +103,7 @@ function generateLang(l, state, genPattern) {
     // version index page
     const nav = conf.vers.map(v => {
         if (v === "latest") return newNaviItem(v + '/Docs.htm', 'Latest Release');
-        if (v === "beta") return newNaviItem('https://SymDSTools.github.io/Docs/docs/docs/latest/Docs.htm', 'Latest Beta');
+        if (v === "beta") return newNaviItem('https://SymDSTools.github.io/Docs/docs/latest/Docs.htm', 'Latest Beta');
         return newNaviItem(v + '/Docs.htm', "Version " + v.replace(/v(\d)(\d\d)(\.\d+)?/, "$1.$2$3"));
     });
 

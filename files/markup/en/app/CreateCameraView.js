@@ -218,7 +218,7 @@ More samples can be found in the samples section of DroidScript.
  * $$ cam.Record(file, seconds?, quality?) $$
  * @param {str_ptf} file
  * @param {num_sec} [seconds]
- * @param {str} [quality] high|low|480p|720p|1080p|2k|4k|8k|qvga|vga|cif
+ * @param {str} [quality] high|low|cif|qvga|vga|480p|720p|1080p|2k|4k|8k
  */
 
 
