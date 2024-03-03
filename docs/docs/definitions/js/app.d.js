@@ -2342,6 +2342,13 @@ class DsApp {
 	SetInForeground(title, text, largeIcon, smallIcon, importance) {return}
 
 	/**
+	 * Python setInterval wrapper
+	 * @param {() => void} callback 
+	 * @param {num_mls} [interval] 
+	 */
+	SetInterval(callback, interval) {return}
+
+	/**
 	 * Set options for the connected joystick
 	 * @param {string | ("ForwardKeys")[]} [options] <br>
  	 * &emsp; `ForwardKeys` - allows the joystick key presses to pass onto the child controls of the main activity
@@ -2514,6 +2521,13 @@ class DsApp {
 	 * @param {DsTheme} theme 
 	 */
 	SetTheme(theme) {return}
+
+	/**
+	 * Python setTimeout wrapper
+	 * @param {() => void} callback 
+	 * @param {num_mls} timeout 
+	 */
+	SetTimeout(callback, timeout) {return}
 
 	/**
 	 * Change the user agent for html apps
@@ -3691,7 +3705,7 @@ class DsCameraView {
 	 * Start recording video
 	 * @param {str_ptf} file 
 	 * @param {num_sec} [seconds] 
-	 * @param {"high"|"low"|"480p"|"720p"|"1080p"|"2k"|"4k"|"8k"|"qvga"|"vga"|"cif"} [quality] 
+	 * @param {"high"|"low"|"cif"|"qvga"|"vga"|"480p"|"720p"|"1080p"|"2k"|"4k"|"8k"} [quality] 
 	 */
 	Record(file, seconds, quality) {return}
 

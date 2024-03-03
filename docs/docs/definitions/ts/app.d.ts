@@ -1339,6 +1339,9 @@ declare class DsApp {
 	/** Set services to run in the foreground */
 	SetInForeground(title?: str, text?: str, largeIcon?: str_ptf, smallIcon?: str_ptf, importance?: "min"|"low"|"default"|"high"|"none"): void;
 
+	/** Python setInterval wrapper */
+	SetInterval(callback: () => void, interval?: num_mls): void;
+
 	/**
 	 * Set options for the connected joystick
 	 * @param options <br>
@@ -1444,6 +1447,9 @@ declare class DsApp {
 	 * @premium
 	 */
 	SetTheme(theme: DsTheme): void;
+
+	/** Python setTimeout wrapper */
+	SetTimeout(callback: () => void, timeout: num_mls): void;
 
 	/**
 	 * Change the user agent for html apps
@@ -2161,7 +2167,7 @@ declare class DsCameraView {
 	MotionMosaic(xtiles: num_int, ytiles: num_int, sensitivity: num_pxl, minPeriod?: num_mls, image?: DsImage): void;
 
 	/** Start recording video */
-	Record(file: str_ptf, seconds?: num_sec, quality?: "high"|"low"|"480p"|"720p"|"1080p"|"2k"|"4k"|"8k"|"qvga"|"vga"|"cif"): void;
+	Record(file: str_ptf, seconds?: num_sec, quality?: "high"|"low"|"cif"|"qvga"|"vga"|"480p"|"720p"|"1080p"|"2k"|"4k"|"8k"): void;
 
 	/**
 	 * Keeps tracks of the average color around a given point

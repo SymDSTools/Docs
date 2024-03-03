@@ -3705,7 +3705,7 @@ Parameter | Type
 --- | ---
 file | **String:** *path to file ( “/absolute/...” or “relative/...” )*
 seconds? | **Number:** *seconds*
-quality? | **String:** “high” or “low” or “480p” or “720p” or “1080p” or “2k” or “4k” or “8k” or “qvga” or “vga” or “cif”
+quality? | **String:** “high” or “low” or “cif” or “qvga” or “vga” or “480p” or “720p” or “1080p” or “2k” or “4k” or “8k”
 
 ##### cam.ReportColors( list, callback, sampSize?, maxRate? )
 
@@ -34604,6 +34604,22 @@ def tgl_OnTouch(fg):
 </details>
 
 
+### SetInterval
+
+Python wrapper for the native setInterval function.
+```
+app.SetInterval(callback, interval?)
+```
+
+Parameter | Type
+--- | ---
+callback | **function()**
+interval? | **Number:** *milliseconds*
+
+
+
+
+
 ### SetJoystickOptions
 
 Set options for the connected joystick.
@@ -35776,6 +35792,22 @@ def spin_OnChange(item):
     CreateLayout()
 ```
 </details>
+
+
+### SetTimeout
+
+Python wrapper for the native setTimeout function.
+```
+app.SetTimeout(callback, timeout)
+```
+
+Parameter | Type
+--- | ---
+callback | **function()**
+timeout | **Number:** *milliseconds*
+
+
+
 
 
 ### SetUserAgent
