@@ -77,7 +77,7 @@
  * @brief Get the height of the control
  * Get the height of the control as screen height relative float or in pixels with the **px** option.
  * Note that unlike the objects margins its padding does change this value.
- * @param {str} options px
+ * @param {str} [options] px
  * @returns num
  */
 
@@ -85,7 +85,7 @@
 /** ### GetLeft
  * @brief Get distance to the left parent border
  * Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
- * @param {str} options px
+ * @param {str} [options] px
  * @returns num
  */
 
@@ -102,7 +102,7 @@
  * Returns data about the position and size of the control.
  * If the **screen** option is given the position on the screen will be returned. Otherwise relative to the parent control.
  * The **px** options turns the relative values into pixels.
- * @param {str} options screen,px
+ * @param {str} [options] screen,px
  * @returns obj-{ left:num, top:num, width:num, height:num }
  */
 
@@ -117,7 +117,7 @@
 /** ### GetTextSize
  * @brief Returns the current text size
  * Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
- * @param {str} mode px
+ * @param {str} [mode] px
  * @returns num
  */
 
@@ -125,7 +125,7 @@
 /** ### GetTop
  * @brief Get distance to the upper parent border
  * Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
- * @param {str} options px
+ * @param {str} [options] px
  * @returns num
  */
 
@@ -144,7 +144,7 @@
  * @brief Get the width of the control
  * Get the width of the control as screen width relative float or in pixels with the **px** option.
  * Note that unlike the objects margins its padding does change this value.
- * @param {str} options px
+ * @param {str} [options] px
  * @returns num
  */
 

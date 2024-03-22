@@ -30,7 +30,7 @@ To add other controls to your scroller you need to put them in a scroller [layou
  * @brief Add a layout control
  * Add a layout to the scroller.
  * $$ scr.AddChild(layout) $$
- * @param {dso} layout CreateLayout
+ * @param {dso} layout
  */
 
 
@@ -48,7 +48,7 @@ To add other controls to your scroller you need to put them in a scroller [layou
  * @brief Devil rises and takes a child with him to hell
  * Removes and releases a child object.
  * $$ scr.DestroyChild(layout) $$
- * @param {dso} layout CreateLayout
+ * @param {dso} layout
  */
 
 

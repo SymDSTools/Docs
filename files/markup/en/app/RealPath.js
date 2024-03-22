@@ -6,4 +6,5 @@
  * Converts short file paths to full paths
  * $$ app.RealPath(path) $$
  * @param {str_pth} path
+ * @returns str
 */
