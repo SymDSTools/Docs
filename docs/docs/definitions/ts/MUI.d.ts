@@ -894,10 +894,10 @@ declare class MuiAlert {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -906,13 +906,13 @@ declare class MuiAlert {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -964,10 +964,10 @@ declare class MuiAlertSimple {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -976,13 +976,13 @@ declare class MuiAlertSimple {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1046,10 +1046,10 @@ declare class MuiAppBar {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1058,16 +1058,16 @@ declare class MuiAppBar {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1147,10 +1147,10 @@ declare class MuiAppBarElegant {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1159,16 +1159,16 @@ declare class MuiAppBarElegant {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1209,7 +1209,7 @@ declare class MuiAppBarElegant {
 declare class MuiAppBarModern {
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Calls a function when right control is touch */
 	SetOnControlTouch(callback: (this: MuiAppBarModern) => void): void;
@@ -1317,10 +1317,10 @@ declare class MuiBanner {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1329,16 +1329,16 @@ declare class MuiBanner {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1405,10 +1405,10 @@ declare class MuiButtonContained {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1417,16 +1417,16 @@ declare class MuiButtonContained {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -1435,7 +1435,7 @@ declare class MuiButtonContained {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1593,10 +1593,10 @@ declare class MuiButtonElegant {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1605,16 +1605,16 @@ declare class MuiButtonElegant {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -1623,7 +1623,7 @@ declare class MuiButtonElegant {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1784,10 +1784,10 @@ declare class MuiButtonFlat {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1796,16 +1796,16 @@ declare class MuiButtonFlat {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -1814,7 +1814,7 @@ declare class MuiButtonFlat {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -1972,10 +1972,10 @@ declare class MuiButtonOutlined {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1984,16 +1984,16 @@ declare class MuiButtonOutlined {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2002,7 +2002,7 @@ declare class MuiButtonOutlined {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2160,10 +2160,10 @@ declare class MuiButtonRaised {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2172,16 +2172,16 @@ declare class MuiButtonRaised {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2190,7 +2190,7 @@ declare class MuiButtonRaised {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2351,10 +2351,10 @@ declare class MuiButtonRaisedO {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2363,16 +2363,16 @@ declare class MuiButtonRaisedO {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2381,7 +2381,7 @@ declare class MuiButtonRaisedO {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2542,10 +2542,10 @@ declare class MuiButtonRound {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2554,16 +2554,16 @@ declare class MuiButtonRound {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2572,7 +2572,7 @@ declare class MuiButtonRound {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2733,10 +2733,10 @@ declare class MuiButtonRoundO {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2745,16 +2745,16 @@ declare class MuiButtonRoundO {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2763,7 +2763,7 @@ declare class MuiButtonRoundO {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2924,10 +2924,10 @@ declare class MuiButtonText {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2936,16 +2936,16 @@ declare class MuiButtonText {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -2954,7 +2954,7 @@ declare class MuiButtonText {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3112,10 +3112,10 @@ declare class MuiButtonToggle {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3124,16 +3124,16 @@ declare class MuiButtonToggle {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -3142,7 +3142,7 @@ declare class MuiButtonToggle {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3285,10 +3285,10 @@ declare class MuiCard {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3297,16 +3297,16 @@ declare class MuiCard {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3389,10 +3389,10 @@ declare class MuiCheckbox {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3401,10 +3401,10 @@ declare class MuiCheckbox {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the type of MUI control */
 	GetType(): str;
@@ -3413,7 +3413,7 @@ declare class MuiCheckbox {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3493,10 +3493,10 @@ declare class MuiCheckList {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3505,13 +3505,13 @@ declare class MuiCheckList {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3557,10 +3557,10 @@ declare class MuiColorPicker {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3569,13 +3569,13 @@ declare class MuiColorPicker {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Checks if the control is useable */
 	IsEnabled(): bin;
@@ -3653,10 +3653,10 @@ declare class MuiDataTable {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3665,16 +3665,16 @@ declare class MuiDataTable {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3739,10 +3739,10 @@ declare class MuiDatePicker {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3751,13 +3751,13 @@ declare class MuiDatePicker {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Checks if the control is useable */
 	IsEnabled(): bin;
@@ -3823,10 +3823,10 @@ declare class MuiDialog {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3835,16 +3835,16 @@ declare class MuiDialog {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3948,10 +3948,10 @@ declare class MuiFAB {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3960,10 +3960,10 @@ declare class MuiFAB {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -3972,7 +3972,7 @@ declare class MuiFAB {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4073,10 +4073,10 @@ declare class MuiFABElegant {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4085,10 +4085,10 @@ declare class MuiFABElegant {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -4097,7 +4097,7 @@ declare class MuiFABElegant {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4198,10 +4198,10 @@ declare class MuiFABOutline {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4210,10 +4210,10 @@ declare class MuiFABOutline {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Button";
@@ -4222,7 +4222,7 @@ declare class MuiFABOutline {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4302,7 +4302,7 @@ declare class MuiList {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get item */
 	GetItem(title: str): obj;
@@ -4311,7 +4311,7 @@ declare class MuiList {
 	GetItemByIndex(index: num): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get length */
 	GetLength(): num_int;
@@ -4326,13 +4326,13 @@ declare class MuiList {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "List";
@@ -4341,7 +4341,7 @@ declare class MuiList {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4565,10 +4565,10 @@ declare class MuiListDialog {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4577,13 +4577,13 @@ declare class MuiListDialog {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4716,10 +4716,10 @@ declare class MuiListModern {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4728,16 +4728,16 @@ declare class MuiListModern {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4823,10 +4823,10 @@ declare class MuiListSimple {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4835,16 +4835,16 @@ declare class MuiListSimple {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4924,10 +4924,10 @@ declare class MuiMenu {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -4936,13 +4936,13 @@ declare class MuiMenu {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4991,10 +4991,10 @@ declare class MuiMenuWithIcon {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5003,13 +5003,13 @@ declare class MuiMenuWithIcon {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5073,10 +5073,10 @@ declare class MuiModal {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5085,13 +5085,13 @@ declare class MuiModal {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5140,7 +5140,7 @@ declare class MuiRadio {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get item */
 	GetItem(title: str): obj;
@@ -5149,7 +5149,7 @@ declare class MuiRadio {
 	GetItemByIndex(index: num): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get length */
 	GetLength(): num_int;
@@ -5164,13 +5164,13 @@ declare class MuiRadio {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "List";
@@ -5179,7 +5179,7 @@ declare class MuiRadio {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5397,13 +5397,13 @@ declare class MuiRadioButtons {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Returns the corresponding item */
 	GetItem(index: num_int): "title";
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/**
 	 * Gets the list
@@ -5418,16 +5418,16 @@ declare class MuiRadioButtons {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Radio";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5513,13 +5513,13 @@ declare class MuiRadioMaterial {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Returns the corresponding item */
 	GetItem(index: num_int): "title";
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/**
 	 * Gets the list
@@ -5534,16 +5534,16 @@ declare class MuiRadioMaterial {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Radio";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5620,10 +5620,10 @@ declare class MuiSeekBar {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5632,16 +5632,16 @@ declare class MuiSeekBar {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Seekbar";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5726,10 +5726,10 @@ declare class MuiSpinner {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5738,16 +5738,16 @@ declare class MuiSpinner {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the current visibility state */
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5818,10 +5818,10 @@ declare class MuiSwitch {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5830,16 +5830,16 @@ declare class MuiSwitch {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Seekbar";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5901,10 +5901,10 @@ declare class MuiSwitchSettings {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5913,16 +5913,16 @@ declare class MuiSwitchSettings {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Seekbar";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5987,10 +5987,10 @@ declare class MuiTabFixed {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5999,16 +5999,16 @@ declare class MuiTabFixed {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Tab";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -7400,13 +7400,13 @@ declare class MuiTextH1 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -7427,16 +7427,16 @@ declare class MuiTextH1 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -7445,7 +7445,7 @@ declare class MuiTextH1 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -7618,13 +7618,13 @@ declare class MuiTextH2 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -7645,16 +7645,16 @@ declare class MuiTextH2 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -7663,7 +7663,7 @@ declare class MuiTextH2 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -7836,13 +7836,13 @@ declare class MuiTextH3 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -7863,16 +7863,16 @@ declare class MuiTextH3 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -7881,7 +7881,7 @@ declare class MuiTextH3 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -8054,13 +8054,13 @@ declare class MuiTextH4 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -8081,16 +8081,16 @@ declare class MuiTextH4 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -8099,7 +8099,7 @@ declare class MuiTextH4 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -8272,13 +8272,13 @@ declare class MuiTextH5 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -8299,16 +8299,16 @@ declare class MuiTextH5 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -8317,7 +8317,7 @@ declare class MuiTextH5 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -8490,13 +8490,13 @@ declare class MuiTextH6 {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -8517,16 +8517,16 @@ declare class MuiTextH6 {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -8535,7 +8535,7 @@ declare class MuiTextH6 {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -8708,13 +8708,13 @@ declare class MuiTextJumbo {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -8735,16 +8735,16 @@ declare class MuiTextJumbo {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -8753,7 +8753,7 @@ declare class MuiTextJumbo {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -8926,13 +8926,13 @@ declare class MuiTextParagraph {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -8953,16 +8953,16 @@ declare class MuiTextParagraph {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -8971,7 +8971,7 @@ declare class MuiTextParagraph {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -9144,13 +9144,13 @@ declare class MuiTextSecondary {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get html */
 	GetHtml(): obj;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get line count */
 	GetLineCount(): num_int;
@@ -9171,16 +9171,16 @@ declare class MuiTextSecondary {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get type */
 	GetType(): "Text";
@@ -9189,7 +9189,7 @@ declare class MuiTextSecondary {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -9344,10 +9344,10 @@ declare class MuiTimePicker {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -9356,13 +9356,13 @@ declare class MuiTimePicker {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Checks if the control is useable */
 	IsEnabled(): bin;

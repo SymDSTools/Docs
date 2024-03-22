@@ -2619,7 +2619,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### btn.GetHeight( options )
+##### btn.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -2627,16 +2627,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### btn.GetLeft( options )
+##### btn.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### btn.GetParent()
@@ -2647,7 +2647,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### btn.GetPosition( options )
+##### btn.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -2657,7 +2657,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### btn.GetText()
@@ -2668,22 +2668,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### btn.GetTextSize( mode )
+##### btn.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### btn.GetTop( options )
+##### btn.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### btn.GetType()
@@ -2708,7 +2708,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### btn.GetWidth( options )
+##### btn.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -2716,7 +2716,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### btn.Gone()
@@ -3471,7 +3471,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“none”</docstr>, <docstr>“mono”</docstr>, <docstr>“negative”</docstr>, <docstr>“solarize”</docstr>, <docstr>“sepia”</docstr>, <docstr>“posterize”</docstr>, <docstr>“whiteboard”</docstr>, <docstr>“blackboard”</docstr>, <docstr>“aqua”</docstr>, <docstr>“vage-cold”</docstr>, <docstr>“point-blue”</docstr>, <docstr>“point-red-yellow”</docstr>, <docstr>“emboss”</docstr>, <docstr>“sketch”</docstr>, <docstr>“neon”</docstr>
 
-##### cam.GetHeight( options )
+##### cam.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -3479,7 +3479,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cam.GetImageHeight()
@@ -3498,13 +3498,13 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *fraction (0..1)*
 
-##### cam.GetLeft( options )
+##### cam.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cam.GetMaxZoom()
@@ -3552,7 +3552,7 @@ width | **Number:** *fraction (0..1)*
 height | **Number:** *fraction (0..1)*
 Return Value: | **String:** *base64 encoded*
 
-##### cam.GetPosition( options )
+##### cam.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -3562,16 +3562,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### cam.GetTop( options )
+##### cam.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cam.GetType()
@@ -3596,7 +3596,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### cam.GetWidth( options )
+##### cam.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -3604,7 +3604,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cam.GetZoom()
@@ -4256,7 +4256,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Boolean**
 
-##### chk.GetHeight( options )
+##### chk.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -4264,16 +4264,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### chk.GetLeft( options )
+##### chk.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### chk.GetParent()
@@ -4284,7 +4284,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### chk.GetPosition( options )
+##### chk.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -4294,7 +4294,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### chk.GetText()
@@ -4305,22 +4305,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### chk.GetTextSize( mode )
+##### chk.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### chk.GetTop( options )
+##### chk.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### chk.GetType()
@@ -4345,7 +4345,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### chk.GetWidth( options )
+##### chk.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -4353,7 +4353,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### chk.Gone()
@@ -4980,7 +4980,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### cde.GetHeight( options )
+##### cde.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -4988,16 +4988,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### cde.GetLeft( options )
+##### cde.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cde.GetLineStart( line )
@@ -5017,7 +5017,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### cde.GetPosition( options )
+##### cde.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -5027,7 +5027,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### cde.GetSelectedText()
@@ -5070,13 +5070,13 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### cde.GetTop( options )
+##### cde.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cde.GetType()
@@ -5101,7 +5101,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### cde.GetWidth( options )
+##### cde.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -5109,7 +5109,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### cde.Gone()
@@ -5972,7 +5972,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### dlg.GetHeight( options )
+##### dlg.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -5980,16 +5980,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### dlg.GetLeft( options )
+##### dlg.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### dlg.GetParent()
@@ -6000,7 +6000,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### dlg.GetPosition( options )
+##### dlg.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -6010,7 +6010,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### dlg.GetTitleHeight()
@@ -6021,13 +6021,13 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *pixel*
 
-##### dlg.GetTop( options )
+##### dlg.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### dlg.GetType()
@@ -6052,7 +6052,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### dlg.GetWidth( options )
+##### dlg.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -6060,7 +6060,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### dlg.Gone()
@@ -7221,7 +7221,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### gmv.GetHeight( options )
+##### gmv.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -7229,16 +7229,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### gmv.GetLeft( options )
+##### gmv.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### gmv.GetParent()
@@ -7249,7 +7249,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### gmv.GetPosition( options )
+##### gmv.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -7259,16 +7259,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### gmv.GetTop( options )
+##### gmv.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### gmv.GetType()
@@ -7293,7 +7293,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### gmv.GetWidth( options )
+##### gmv.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -7301,7 +7301,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### gmv.Gone()
@@ -8188,7 +8188,7 @@ Parameter | Type
 tx | **Number:** *pixel*
 ty | **Number:** *pixel*
 
-##### glv.GetHeight( options )
+##### glv.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -8196,16 +8196,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### glv.GetLeft( options )
+##### glv.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### glv.GetParent()
@@ -8216,7 +8216,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### glv.GetPosition( options )
+##### glv.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -8226,16 +8226,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### glv.GetTop( options )
+##### glv.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### glv.GetType()
@@ -8260,7 +8260,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### glv.GetWidth( options )
+##### glv.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -8268,7 +8268,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### glv.Gone()
@@ -9154,7 +9154,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### img.GetHeight( options )
+##### img.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -9162,16 +9162,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### img.GetLeft( options )
+##### img.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### img.GetName()
@@ -9213,7 +9213,7 @@ width=-1 | **Number:** *integer*
 height=-1 | **Number:** *integer*
 Return Value: | **String:** *base64 encoded*
 
-##### img.GetPosition( options )
+##### img.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -9223,16 +9223,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### img.GetTop( options )
+##### img.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### img.GetType()
@@ -9257,7 +9257,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### img.GetWidth( options )
+##### img.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -9265,7 +9265,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### img.Gone()
@@ -10139,7 +10139,7 @@ Parameter | Type
 child | **app object**
 Return Value: | **Number:** *integer*
 
-##### lay.GetHeight( options )
+##### lay.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -10147,16 +10147,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### lay.GetLeft( options )
+##### lay.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lay.GetParent()
@@ -10167,7 +10167,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### lay.GetPosition( options )
+##### lay.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -10177,16 +10177,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### lay.GetTop( options )
+##### lay.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lay.GetType()
@@ -10211,7 +10211,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### lay.GetWidth( options )
+##### lay.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -10219,7 +10219,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lay.Gone()
@@ -11030,7 +11030,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### lst.GetHeight( options )
+##### lst.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -11038,7 +11038,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lst.GetItem( title )
@@ -11059,13 +11059,13 @@ Parameter | Type
 index | **Number:** *integer*
 Return Value: | **Object:** { title *(**String**)*, body *(**String**)*, image *(**String:** *path to file or folder ( <docstr>“/absolute/...”</docstr> or <docstr>“relative/...”</docstr> )*)* }
 
-##### lst.GetLeft( options )
+##### lst.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lst.GetLength()
@@ -11093,7 +11093,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### lst.GetPosition( options )
+##### lst.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -11103,25 +11103,25 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### lst.GetTextSize( mode )
+##### lst.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### lst.GetTop( options )
+##### lst.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lst.GetType()
@@ -11146,7 +11146,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### lst.GetWidth( options )
+##### lst.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -11154,7 +11154,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### lst.Gone()
@@ -14645,7 +14645,7 @@ Add a layout to the scroller.
 
 Parameter | Type
 --- | ---
-layout | **app object:** [Layout](#CreateLayout)
+layout | **app object**
 
 ##### scr.AdjustColor( hue, saturation?, brightness?, contrast? )
 
@@ -14700,7 +14700,7 @@ Removes and releases a child object.
 
 Parameter | Type
 --- | ---
-layout | **app object:** [Layout](#CreateLayout)
+layout | **app object**
 
 ##### scr.Focus()
 
@@ -14726,7 +14726,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### scr.GetHeight( options )
+##### scr.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -14734,16 +14734,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### scr.GetLeft( options )
+##### scr.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### scr.GetParent()
@@ -14754,7 +14754,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### scr.GetPosition( options )
+##### scr.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -14764,7 +14764,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### scr.GetScrollX()
@@ -14783,13 +14783,13 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *fraction (0..1)*
 
-##### scr.GetTop( options )
+##### scr.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### scr.GetType()
@@ -14814,7 +14814,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### scr.GetWidth( options )
+##### scr.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -14822,7 +14822,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### scr.Gone()
@@ -15241,7 +15241,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### skb.GetHeight( options )
+##### skb.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -15249,16 +15249,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### skb.GetLeft( options )
+##### skb.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### skb.GetParent()
@@ -15269,7 +15269,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### skb.GetPosition( options )
+##### skb.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -15279,16 +15279,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### skb.GetTop( options )
+##### skb.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### skb.GetType()
@@ -15321,7 +15321,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### skb.GetWidth( options )
+##### skb.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -15329,7 +15329,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### skb.Gone()
@@ -16739,7 +16739,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### spn.GetHeight( options )
+##### spn.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -16747,16 +16747,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### spn.GetLeft( options )
+##### spn.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### spn.GetParent()
@@ -16767,7 +16767,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### spn.GetPosition( options )
+##### spn.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -16777,7 +16777,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### spn.GetText()
@@ -16788,22 +16788,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### spn.GetTextSize( mode )
+##### spn.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### spn.GetTop( options )
+##### spn.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### spn.GetType()
@@ -16828,7 +16828,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### spn.GetWidth( options )
+##### spn.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -16836,7 +16836,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### spn.Gone()
@@ -17262,7 +17262,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Boolean**
 
-##### swi.GetHeight( options )
+##### swi.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -17270,16 +17270,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### swi.GetLeft( options )
+##### swi.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### swi.GetParent()
@@ -17290,7 +17290,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### swi.GetPosition( options )
+##### swi.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -17300,7 +17300,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### swi.GetText()
@@ -17311,22 +17311,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### swi.GetTextSize( mode )
+##### swi.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### swi.GetTop( options )
+##### swi.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### swi.GetType()
@@ -17351,7 +17351,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### swi.GetWidth( options )
+##### swi.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -17359,7 +17359,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### swi.Gone()
@@ -18548,7 +18548,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### tab.GetHeight( options )
+##### tab.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -18556,7 +18556,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tab.GetLayout( name )
@@ -18568,13 +18568,13 @@ Parameter | Type
 name | **String**
 Return Value: | **app object:** [Layout](#CreateLayout)
 
-##### tab.GetLeft( options )
+##### tab.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tab.GetParent()
@@ -18585,7 +18585,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### tab.GetPosition( options )
+##### tab.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -18595,16 +18595,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### tab.GetTop( options )
+##### tab.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tab.GetType()
@@ -18629,7 +18629,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### tab.GetWidth( options )
+##### tab.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -18637,7 +18637,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tab.Gone()
@@ -19189,7 +19189,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### txt.GetHeight( options )
+##### txt.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -19197,7 +19197,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### txt.GetHtml()
@@ -19208,13 +19208,13 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** *html code*
 
-##### txt.GetLeft( options )
+##### txt.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### txt.GetLineCount()
@@ -19259,7 +19259,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### txt.GetPosition( options )
+##### txt.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -19269,7 +19269,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### txt.GetText()
@@ -19280,22 +19280,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### txt.GetTextSize( mode )
+##### txt.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### txt.GetTop( options )
+##### txt.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### txt.GetType()
@@ -19320,7 +19320,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### txt.GetWidth( options )
+##### txt.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -19328,7 +19328,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### txt.Gone()
@@ -19969,7 +19969,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### edt.GetHeight( options )
+##### edt.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -19977,7 +19977,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### edt.GetHtml()
@@ -19988,13 +19988,13 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** *html code*
 
-##### edt.GetLeft( options )
+##### edt.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### edt.GetLineCount()
@@ -20039,7 +20039,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### edt.GetPosition( options )
+##### edt.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -20049,7 +20049,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### edt.GetSelectedText()
@@ -20084,22 +20084,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### edt.GetTextSize( mode )
+##### edt.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### edt.GetTop( options )
+##### edt.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### edt.GetType()
@@ -20124,7 +20124,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### edt.GetWidth( options )
+##### edt.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -20132,7 +20132,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### edt.Gone()
@@ -21017,7 +21017,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Boolean**
 
-##### tgl.GetHeight( options )
+##### tgl.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -21025,16 +21025,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### tgl.GetLeft( options )
+##### tgl.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tgl.GetParent()
@@ -21045,7 +21045,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### tgl.GetPosition( options )
+##### tgl.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -21055,7 +21055,7 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
 ##### tgl.GetText()
@@ -21066,22 +21066,22 @@ Parameter | Type
 --- | ---
 Return Value: | **String**
 
-##### tgl.GetTextSize( mode )
+##### tgl.GetTextSize( mode? )
 
 Returns the current size of the contained text. If the **px** option is given the size will be retured in pixels.
 
 Parameter | Type
 --- | ---
-mode | **String:** “px”
+mode? | **String:** “px”
 Return Value: | **Number**
 
-##### tgl.GetTop( options )
+##### tgl.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tgl.GetType()
@@ -21106,7 +21106,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### tgl.GetWidth( options )
+##### tgl.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -21114,7 +21114,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### tgl.Gone()
@@ -21792,7 +21792,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *float*
 
-##### vid.GetHeight( options )
+##### vid.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -21800,16 +21800,16 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
-##### vid.GetLeft( options )
+##### vid.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### vid.GetParent()
@@ -21820,7 +21820,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### vid.GetPosition( options )
+##### vid.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -21830,16 +21830,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### vid.GetTop( options )
+##### vid.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### vid.GetType()
@@ -21864,7 +21864,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### vid.GetWidth( options )
+##### vid.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -21872,7 +21872,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### vid.Gone()
@@ -23220,7 +23220,7 @@ Parameter | Type
 --- | ---
 Return Value: | **Number:** *integer*
 
-##### web.GetHeight( options )
+##### web.GetHeight( options? )
 
 Get the height of the control as screen height relative float or in pixels with the **px** option.
 
@@ -23228,7 +23228,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### web.GetHomeUrl()
@@ -23239,13 +23239,13 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** *url path*
 
-##### web.GetLeft( options )
+##### web.GetLeft( options? )
 
 Get the distance from the control to the left parent border as width relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### web.GetParent()
@@ -23256,7 +23256,7 @@ Parameter | Type
 --- | ---
 Return Value: | **app object**
 
-##### web.GetPosition( options )
+##### web.GetPosition( options? )
 
 Returns data about the position and size of the control.
 
@@ -23266,16 +23266,16 @@ The **px** options turns the relative values into pixels.
 
 Parameter | Type
 --- | ---
-options | **String:** “screen”, “px”
+options? | **String:** “screen”, “px”
 Return Value: | **Object:** { left *(**Number**)*, top *(**Number**)*, width *(**Number**)*, height *(**Number**)* }
 
-##### web.GetTop( options )
+##### web.GetTop( options? )
 
 Get the distance from the control to the upper parent border as height relative float or in pixels with the **px** option.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### web.GetType()
@@ -23308,7 +23308,7 @@ Parameter | Type
 --- | ---
 Return Value: | **String:** <docstr>“Show”</docstr> or <docstr>“Hide”</docstr> or <docstr>“Gone”</docstr>
 
-##### web.GetWidth( options )
+##### web.GetWidth( options? )
 
 Get the width of the control as screen width relative float or in pixels with the **px** option.
 
@@ -23316,7 +23316,7 @@ Note that unlike the objects margins its padding does change this value.
 
 Parameter | Type
 --- | ---
-options | **String:** “px”
+options? | **String:** “px”
 Return Value: | **Number**
 
 ##### web.Gone()
@@ -32267,6 +32267,7 @@ app.RealPath(path)
 Parameter | Type
 --- | ---
 path | **String:** *path to file or folder ( “/absolute/...” or “relative/...” )*
+Return Value: | **String**
 
 
 

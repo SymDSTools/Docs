@@ -1636,14 +1636,14 @@ class MuiAlert {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -1656,21 +1656,21 @@ class MuiAlert {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -1758,14 +1758,14 @@ class MuiAlertSimple {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -1778,21 +1778,21 @@ class MuiAlertSimple {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -1892,14 +1892,14 @@ class MuiAppBar {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -1912,14 +1912,14 @@ class MuiAppBar {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -1932,7 +1932,7 @@ class MuiAppBar {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -2059,14 +2059,14 @@ class MuiAppBarElegant {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -2079,14 +2079,14 @@ class MuiAppBarElegant {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -2099,7 +2099,7 @@ class MuiAppBarElegant {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -2172,7 +2172,7 @@ class MuiAppBarModern {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -2358,14 +2358,14 @@ class MuiBanner {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -2378,14 +2378,14 @@ class MuiBanner {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -2398,7 +2398,7 @@ class MuiBanner {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -2494,14 +2494,14 @@ class MuiButtonContained {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -2514,7 +2514,7 @@ class MuiButtonContained {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -2527,14 +2527,14 @@ class MuiButtonContained {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -2553,7 +2553,7 @@ class MuiButtonContained {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -2839,14 +2839,14 @@ class MuiButtonElegant {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -2859,7 +2859,7 @@ class MuiButtonElegant {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -2872,14 +2872,14 @@ class MuiButtonElegant {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -2898,7 +2898,7 @@ class MuiButtonElegant {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -3191,14 +3191,14 @@ class MuiButtonFlat {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -3211,7 +3211,7 @@ class MuiButtonFlat {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -3224,14 +3224,14 @@ class MuiButtonFlat {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -3250,7 +3250,7 @@ class MuiButtonFlat {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -3536,14 +3536,14 @@ class MuiButtonOutlined {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -3556,7 +3556,7 @@ class MuiButtonOutlined {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -3569,14 +3569,14 @@ class MuiButtonOutlined {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -3595,7 +3595,7 @@ class MuiButtonOutlined {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -3881,14 +3881,14 @@ class MuiButtonRaised {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -3901,7 +3901,7 @@ class MuiButtonRaised {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -3914,14 +3914,14 @@ class MuiButtonRaised {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -3940,7 +3940,7 @@ class MuiButtonRaised {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4233,14 +4233,14 @@ class MuiButtonRaisedO {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4253,7 +4253,7 @@ class MuiButtonRaisedO {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4266,14 +4266,14 @@ class MuiButtonRaisedO {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4292,7 +4292,7 @@ class MuiButtonRaisedO {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4585,14 +4585,14 @@ class MuiButtonRound {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4605,7 +4605,7 @@ class MuiButtonRound {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4618,14 +4618,14 @@ class MuiButtonRound {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4644,7 +4644,7 @@ class MuiButtonRound {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4937,14 +4937,14 @@ class MuiButtonRoundO {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4957,7 +4957,7 @@ class MuiButtonRoundO {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4970,14 +4970,14 @@ class MuiButtonRoundO {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4996,7 +4996,7 @@ class MuiButtonRoundO {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -5289,14 +5289,14 @@ class MuiButtonText {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -5309,7 +5309,7 @@ class MuiButtonText {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -5322,14 +5322,14 @@ class MuiButtonText {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -5348,7 +5348,7 @@ class MuiButtonText {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -5634,14 +5634,14 @@ class MuiButtonToggle {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -5654,7 +5654,7 @@ class MuiButtonToggle {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -5667,14 +5667,14 @@ class MuiButtonToggle {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -5693,7 +5693,7 @@ class MuiButtonToggle {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -5978,14 +5978,14 @@ class MuiCard {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -5998,14 +5998,14 @@ class MuiCard {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6018,7 +6018,7 @@ class MuiCard {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6149,14 +6149,14 @@ class MuiCheckbox {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6169,14 +6169,14 @@ class MuiCheckbox {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6195,7 +6195,7 @@ class MuiCheckbox {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6332,14 +6332,14 @@ class MuiCheckList {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6352,21 +6352,21 @@ class MuiCheckList {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6442,14 +6442,14 @@ class MuiColorPicker {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6462,21 +6462,21 @@ class MuiColorPicker {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6588,14 +6588,14 @@ class MuiDataTable {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6608,14 +6608,14 @@ class MuiDataTable {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6628,7 +6628,7 @@ class MuiDataTable {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6747,14 +6747,14 @@ class MuiDatePicker {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6767,21 +6767,21 @@ class MuiDatePicker {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6881,14 +6881,14 @@ class MuiDialog {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6901,14 +6901,14 @@ class MuiDialog {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6921,7 +6921,7 @@ class MuiDialog {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -7078,14 +7078,14 @@ class MuiFAB {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -7098,14 +7098,14 @@ class MuiFAB {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -7124,7 +7124,7 @@ class MuiFAB {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -7285,14 +7285,14 @@ class MuiFABElegant {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -7305,14 +7305,14 @@ class MuiFABElegant {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -7331,7 +7331,7 @@ class MuiFABElegant {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -7492,14 +7492,14 @@ class MuiFABOutline {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -7512,14 +7512,14 @@ class MuiFABOutline {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -7538,7 +7538,7 @@ class MuiFABOutline {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -7677,7 +7677,7 @@ class MuiList {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -7698,7 +7698,7 @@ class MuiList {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -7724,21 +7724,21 @@ class MuiList {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -7757,7 +7757,7 @@ class MuiList {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8219,14 +8219,14 @@ class MuiListDialog {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8239,21 +8239,21 @@ class MuiListDialog {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8444,14 +8444,14 @@ class MuiListModern {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8464,14 +8464,14 @@ class MuiListModern {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -8484,7 +8484,7 @@ class MuiListModern {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8629,14 +8629,14 @@ class MuiListSimple {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8649,14 +8649,14 @@ class MuiListSimple {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -8669,7 +8669,7 @@ class MuiListSimple {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8806,14 +8806,14 @@ class MuiMenu {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8826,21 +8826,21 @@ class MuiMenu {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8922,14 +8922,14 @@ class MuiMenuWithIcon {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8942,21 +8942,21 @@ class MuiMenuWithIcon {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9068,14 +9068,14 @@ class MuiModal {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9088,21 +9088,21 @@ class MuiModal {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9186,7 +9186,7 @@ class MuiRadio {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -9207,7 +9207,7 @@ class MuiRadio {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9233,21 +9233,21 @@ class MuiRadio {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -9266,7 +9266,7 @@ class MuiRadio {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9708,7 +9708,7 @@ class MuiRadioButtons {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -9722,7 +9722,7 @@ class MuiRadioButtons {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9741,14 +9741,14 @@ class MuiRadioButtons {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -9761,7 +9761,7 @@ class MuiRadioButtons {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9918,7 +9918,7 @@ class MuiRadioMaterial {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -9932,7 +9932,7 @@ class MuiRadioMaterial {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9951,14 +9951,14 @@ class MuiRadioMaterial {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -9971,7 +9971,7 @@ class MuiRadioMaterial {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10099,14 +10099,14 @@ class MuiSeekBar {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10119,14 +10119,14 @@ class MuiSeekBar {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10139,7 +10139,7 @@ class MuiSeekBar {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10277,14 +10277,14 @@ class MuiSpinner {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10297,14 +10297,14 @@ class MuiSpinner {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10317,7 +10317,7 @@ class MuiSpinner {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10444,14 +10444,14 @@ class MuiSwitch {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10464,14 +10464,14 @@ class MuiSwitch {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10484,7 +10484,7 @@ class MuiSwitch {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10595,14 +10595,14 @@ class MuiSwitchSettings {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10615,14 +10615,14 @@ class MuiSwitchSettings {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10635,7 +10635,7 @@ class MuiSwitchSettings {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10747,14 +10747,14 @@ class MuiTabFixed {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10767,14 +10767,14 @@ class MuiTabFixed {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10787,7 +10787,7 @@ class MuiTabFixed {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -13390,7 +13390,7 @@ class MuiTextH1 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -13403,7 +13403,7 @@ class MuiTextH1 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -13442,7 +13442,7 @@ class MuiTextH1 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -13455,14 +13455,14 @@ class MuiTextH1 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -13481,7 +13481,7 @@ class MuiTextH1 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -13793,7 +13793,7 @@ class MuiTextH2 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -13806,7 +13806,7 @@ class MuiTextH2 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -13845,7 +13845,7 @@ class MuiTextH2 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -13858,14 +13858,14 @@ class MuiTextH2 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -13884,7 +13884,7 @@ class MuiTextH2 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -14196,7 +14196,7 @@ class MuiTextH3 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -14209,7 +14209,7 @@ class MuiTextH3 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -14248,7 +14248,7 @@ class MuiTextH3 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -14261,14 +14261,14 @@ class MuiTextH3 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -14287,7 +14287,7 @@ class MuiTextH3 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -14599,7 +14599,7 @@ class MuiTextH4 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -14612,7 +14612,7 @@ class MuiTextH4 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -14651,7 +14651,7 @@ class MuiTextH4 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -14664,14 +14664,14 @@ class MuiTextH4 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -14690,7 +14690,7 @@ class MuiTextH4 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -15002,7 +15002,7 @@ class MuiTextH5 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -15015,7 +15015,7 @@ class MuiTextH5 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -15054,7 +15054,7 @@ class MuiTextH5 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -15067,14 +15067,14 @@ class MuiTextH5 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -15093,7 +15093,7 @@ class MuiTextH5 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -15405,7 +15405,7 @@ class MuiTextH6 {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -15418,7 +15418,7 @@ class MuiTextH6 {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -15457,7 +15457,7 @@ class MuiTextH6 {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -15470,14 +15470,14 @@ class MuiTextH6 {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -15496,7 +15496,7 @@ class MuiTextH6 {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -15808,7 +15808,7 @@ class MuiTextJumbo {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -15821,7 +15821,7 @@ class MuiTextJumbo {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -15860,7 +15860,7 @@ class MuiTextJumbo {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -15873,14 +15873,14 @@ class MuiTextJumbo {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -15899,7 +15899,7 @@ class MuiTextJumbo {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -16211,7 +16211,7 @@ class MuiTextParagraph {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -16224,7 +16224,7 @@ class MuiTextParagraph {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -16263,7 +16263,7 @@ class MuiTextParagraph {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -16276,14 +16276,14 @@ class MuiTextParagraph {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -16302,7 +16302,7 @@ class MuiTextParagraph {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -16614,7 +16614,7 @@ class MuiTextSecondary {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -16627,7 +16627,7 @@ class MuiTextSecondary {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -16666,7 +16666,7 @@ class MuiTextSecondary {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -16679,14 +16679,14 @@ class MuiTextSecondary {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -16705,7 +16705,7 @@ class MuiTextSecondary {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -17009,14 +17009,14 @@ class MuiTimePicker {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -17029,21 +17029,21 @@ class MuiTimePicker {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}

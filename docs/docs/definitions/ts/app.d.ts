@@ -1193,7 +1193,7 @@ declare class DsApp {
 	ReadFileData(file: str_pfa, mode?: "base64"|"hex"|"int"|"ascii"): lst;
 
 	/** Convert short to full path */
-	RealPath(path: str_pth): void;
+	RealPath(path: str_pth): str;
 
 	/** Read assets from given folder */
 	RedirectAssets(dir: str_ptd): void;
@@ -1861,10 +1861,10 @@ declare class DsButton {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -1873,16 +1873,16 @@ declare class DsButton {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Button";
@@ -1891,7 +1891,7 @@ declare class DsButton {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2070,7 +2070,7 @@ declare class DsCameraView {
 	GetColorEffects(): "none"|"mono"|"negative"|"solarize"|"sepia"|"posterize"|"whiteboard"|"blackboard"|"aqua"|"vage-cold"|"point-blue"|"point-red-yellow"|"emboss"|"sketch"|"neon";
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Returns the camera height */
 	GetImageHeight(): num_frc;
@@ -2079,7 +2079,7 @@ declare class DsCameraView {
 	GetImageWidth(): num_frc;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the hightst possible zoom value */
 	GetMaxZoom(): num;
@@ -2118,10 +2118,10 @@ declare class DsCameraView {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "CameraView";
@@ -2130,7 +2130,7 @@ declare class DsCameraView {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Returns the curent zoom value */
 	GetZoom(): num;
@@ -2349,10 +2349,10 @@ declare class DsCheckBox {
 	GetChecked(): bin;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2361,16 +2361,16 @@ declare class DsCheckBox {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "CheckBox";
@@ -2379,7 +2379,7 @@ declare class DsCheckBox {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2580,10 +2580,10 @@ declare class DsCodeEdit {
 	GetCursorPos(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get the start character index of a line */
 	GetLineStart(line: num_int): num_int;
@@ -2595,7 +2595,7 @@ declare class DsCodeEdit {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get the selected text */
 	GetSelectedText(): str;
@@ -2613,7 +2613,7 @@ declare class DsCodeEdit {
 	GetText(): str;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "CodeEdit";
@@ -2622,7 +2622,7 @@ declare class DsCodeEdit {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -2859,10 +2859,10 @@ declare class DsDialog {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -2871,13 +2871,13 @@ declare class DsDialog {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get title bar height */
 	GetTitleHeight(): num_pxl;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Dialog";
@@ -2886,7 +2886,7 @@ declare class DsDialog {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3231,10 +3231,10 @@ declare class DsGameView {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3243,10 +3243,10 @@ declare class DsGameView {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "GameView";
@@ -3255,7 +3255,7 @@ declare class DsGameView {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3402,10 +3402,10 @@ declare class DsGLView {
 	GetContext(): GLV_ctx;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3414,10 +3414,10 @@ declare class DsGLView {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "GLView";
@@ -3426,7 +3426,7 @@ declare class DsGLView {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3664,10 +3664,10 @@ declare class DsImage {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the name set via SetName */
 	GetName(): str;
@@ -3685,10 +3685,10 @@ declare class DsImage {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Image";
@@ -3697,7 +3697,7 @@ declare class DsImage {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -3933,10 +3933,10 @@ declare class DsLayout {
 	GetChildOrder(child: dso): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -3945,10 +3945,10 @@ declare class DsLayout {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Layout";
@@ -3957,7 +3957,7 @@ declare class DsLayout {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -4139,7 +4139,7 @@ declare class DsList {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/**
 	 * Returns item data by a title
@@ -4154,7 +4154,7 @@ declare class DsList {
 	GetItemByIndex(index: num_int): { title: str, body: str, image: str_pth };
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the list length */
 	GetLength(): num_int;
@@ -4172,13 +4172,13 @@ declare class DsList {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "List";
@@ -4187,7 +4187,7 @@ declare class DsList {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5101,7 +5101,7 @@ declare class DsPlayStore {
 declare class DsScroller {
 
 	/** Add a layout control */
-	AddChild(layout: DsLayout): void;
+	AddChild(layout: dso): void;
 
 	/**
 	 * Adjust the visual color effect of the control
@@ -5134,7 +5134,7 @@ declare class DsScroller {
 	ClearFocus(): void;
 
 	/** Devil rises and takes a child with him to hell */
-	DestroyChild(layout: DsLayout): void;
+	DestroyChild(layout: dso): void;
 
 	/** Set the focus to the control for immediate access */
 	Focus(): void;
@@ -5146,10 +5146,10 @@ declare class DsScroller {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5158,7 +5158,7 @@ declare class DsScroller {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get horizontal scroll bar position */
 	GetScrollX(): num_frc;
@@ -5167,7 +5167,7 @@ declare class DsScroller {
 	GetScrollY(): num_frc;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Scroller";
@@ -5176,7 +5176,7 @@ declare class DsScroller {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5311,10 +5311,10 @@ declare class DsSeekBar {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5323,10 +5323,10 @@ declare class DsSeekBar {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "SeekBar";
@@ -5338,7 +5338,7 @@ declare class DsSeekBar {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5654,10 +5654,10 @@ declare class DsSpinner {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5666,16 +5666,16 @@ declare class DsSpinner {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Spinner";
@@ -5684,7 +5684,7 @@ declare class DsSpinner {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -5845,10 +5845,10 @@ declare class DsSwitch {
 	GetChecked(): bin;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -5857,16 +5857,16 @@ declare class DsSwitch {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Switch";
@@ -5875,7 +5875,7 @@ declare class DsSwitch {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -6215,13 +6215,13 @@ declare class DsTabs {
 	GetCurrentTabName(): str;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get tab content layout */
 	GetLayout(name: str): DsLayout;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -6230,10 +6230,10 @@ declare class DsTabs {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Tabs";
@@ -6242,7 +6242,7 @@ declare class DsTabs {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -6400,13 +6400,13 @@ declare class DsText {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Return html formatted text */
 	GetHtml(): str_htm;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get amount of text lines */
 	GetLineCount(): num_int;
@@ -6427,16 +6427,16 @@ declare class DsText {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Text";
@@ -6445,7 +6445,7 @@ declare class DsText {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -6634,13 +6634,13 @@ declare class DsTextEdit {
 	GetCursorPos(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Return html formatted text */
 	GetHtml(): str_htm;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Get amount of text lines */
 	GetLineCount(): num_int;
@@ -6661,7 +6661,7 @@ declare class DsTextEdit {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get the selected text */
 	GetSelectedText(): str;
@@ -6676,10 +6676,10 @@ declare class DsTextEdit {
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "TextEdit";
@@ -6688,7 +6688,7 @@ declare class DsTextEdit {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -6977,10 +6977,10 @@ declare class DsToggle {
 	GetChecked(): bin;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -6989,16 +6989,16 @@ declare class DsToggle {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Returns the currently contained text */
 	GetText(): str;
 
 	/** Returns the current text size */
-	GetTextSize(mode: "px"): num;
+	GetTextSize(mode?: "px"): num;
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "Toggle";
@@ -7007,7 +7007,7 @@ declare class DsToggle {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -7234,10 +7234,10 @@ declare class DsVideoView {
 	GetDuration(): num_flt;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -7246,10 +7246,10 @@ declare class DsVideoView {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "VideoView";
@@ -7258,7 +7258,7 @@ declare class DsVideoView {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;
@@ -7558,10 +7558,10 @@ declare class DsWebView {
 	GetAbsWidth(): num_int;
 
 	/** Get the height of the control */
-	GetHeight(options: "px"): num;
+	GetHeight(options?: "px"): num;
 
 	/** Get distance to the left parent border */
-	GetLeft(options: "px"): num;
+	GetLeft(options?: "px"): num;
 
 	/** Returns the parent control object */
 	GetParent(): dso;
@@ -7570,10 +7570,10 @@ declare class DsWebView {
 	 * Returns data about position and size
 	 * @return \{ left, top, width, height }
 	 */
-	GetPosition(options: "screen"|"px"): { left: num, top: num, width: num, height: num };
+	GetPosition(options?: "screen"|"px"): { left: num, top: num, width: num, height: num };
 
 	/** Get distance to the upper parent border */
-	GetTop(options: "px"): num;
+	GetTop(options?: "px"): num;
 
 	/** Returns the control class name */
 	GetType(): "WebView";
@@ -7588,7 +7588,7 @@ declare class DsWebView {
 	GetVisibility(): "Show"|"Hide"|"Gone";
 
 	/** Get the width of the control */
-	GetWidth(options: "px"): num;
+	GetWidth(options?: "px"): num;
 
 	/** Make it gone. It was never there! */
 	Gone(): void;

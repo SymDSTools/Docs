@@ -2060,6 +2060,7 @@ class DsApp {
 	/**
 	 * Convert short to full path
 	 * @param {str_pth} path 
+	 * @return {str} 
 	 */
 	RealPath(path) {return}
 
@@ -3155,14 +3156,14 @@ class DsButton {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -3175,7 +3176,7 @@ class DsButton {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -3188,14 +3189,14 @@ class DsButton {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -3214,7 +3215,7 @@ class DsButton {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -3533,7 +3534,7 @@ class DsCameraView {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -3552,7 +3553,7 @@ class DsCameraView {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -3603,14 +3604,14 @@ class DsCameraView {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -3629,7 +3630,7 @@ class DsCameraView {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4029,14 +4030,14 @@ class DsCheckBox {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4049,7 +4050,7 @@ class DsCheckBox {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4062,14 +4063,14 @@ class DsCheckBox {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4088,7 +4089,7 @@ class DsCheckBox {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4437,14 +4438,14 @@ class DsCodeEdit {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4464,7 +4465,7 @@ class DsCodeEdit {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4501,7 +4502,7 @@ class DsCodeEdit {
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4520,7 +4521,7 @@ class DsCodeEdit {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -4942,14 +4943,14 @@ class DsDialog {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -4962,7 +4963,7 @@ class DsDialog {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -4975,7 +4976,7 @@ class DsDialog {
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -4994,7 +4995,7 @@ class DsDialog {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -5544,14 +5545,14 @@ class DsGameView {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -5564,14 +5565,14 @@ class DsGameView {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -5590,7 +5591,7 @@ class DsGameView {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -5852,14 +5853,14 @@ class DsGLView {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -5872,14 +5873,14 @@ class DsGLView {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -5898,7 +5899,7 @@ class DsGLView {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6332,14 +6333,14 @@ class DsImage {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6377,14 +6378,14 @@ class DsImage {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6403,7 +6404,7 @@ class DsImage {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -6832,14 +6833,14 @@ class DsLayout {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -6852,14 +6853,14 @@ class DsLayout {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -6878,7 +6879,7 @@ class DsLayout {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -7207,7 +7208,7 @@ class DsList {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -7228,7 +7229,7 @@ class DsList {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -7254,21 +7255,21 @@ class DsList {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -7287,7 +7288,7 @@ class DsList {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -8813,7 +8814,7 @@ class DsScroller {
 
 	/**
 	 * Add a layout control
-	 * @param {DsLayout} layout 
+	 * @param {dso} layout 
 	 */
 	AddChild(layout) {return}
 
@@ -8848,7 +8849,7 @@ class DsScroller {
 
 	/**
 	 * Devil rises and takes a child with him to hell
-	 * @param {DsLayout} layout 
+	 * @param {dso} layout 
 	 */
 	DestroyChild(layout) {return}
 
@@ -8869,14 +8870,14 @@ class DsScroller {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -8889,7 +8890,7 @@ class DsScroller {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -8908,7 +8909,7 @@ class DsScroller {
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -8927,7 +8928,7 @@ class DsScroller {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9168,14 +9169,14 @@ class DsSeekBar {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9188,14 +9189,14 @@ class DsSeekBar {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -9220,7 +9221,7 @@ class DsSeekBar {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -9717,14 +9718,14 @@ class DsSpinner {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -9737,7 +9738,7 @@ class DsSpinner {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -9750,14 +9751,14 @@ class DsSpinner {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -9776,7 +9777,7 @@ class DsSpinner {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10051,14 +10052,14 @@ class DsSwitch {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10071,7 +10072,7 @@ class DsSwitch {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -10084,14 +10085,14 @@ class DsSwitch {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10110,7 +10111,7 @@ class DsSwitch {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -10675,7 +10676,7 @@ class DsTabs {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -10689,7 +10690,7 @@ class DsTabs {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -10702,14 +10703,14 @@ class DsTabs {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -10728,7 +10729,7 @@ class DsTabs {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -11012,7 +11013,7 @@ class DsText {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -11025,7 +11026,7 @@ class DsText {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -11064,7 +11065,7 @@ class DsText {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -11077,14 +11078,14 @@ class DsText {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -11103,7 +11104,7 @@ class DsText {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -11437,7 +11438,7 @@ class DsTextEdit {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
@@ -11450,7 +11451,7 @@ class DsTextEdit {
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -11489,7 +11490,7 @@ class DsTextEdit {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -11520,14 +11521,14 @@ class DsTextEdit {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -11546,7 +11547,7 @@ class DsTextEdit {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -12048,14 +12049,14 @@ class DsToggle {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -12068,7 +12069,7 @@ class DsToggle {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
@@ -12081,14 +12082,14 @@ class DsToggle {
 
 	/**
 	 * Returns the current text size
-	 * @param {"px"} mode 
+	 * @param {"px"} [mode] 
 	 * @return {num} 
 	 */
 	GetTextSize(mode) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -12107,7 +12108,7 @@ class DsToggle {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -12494,14 +12495,14 @@ class DsVideoView {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -12514,14 +12515,14 @@ class DsVideoView {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -12540,7 +12541,7 @@ class DsVideoView {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
@@ -13030,14 +13031,14 @@ class DsWebView {
 
 	/**
 	 * Get the height of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetHeight(options) {return}
 
 	/**
 	 * Get distance to the left parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetLeft(options) {return}
@@ -13050,14 +13051,14 @@ class DsWebView {
 
 	/**
 	 * Returns data about position and size
-	 * @param {"screen"|"px"} options 
+	 * @param {"screen"|"px"} [options] 
 	 * @return {{ left: num, top: num, width: num, height: num }} { left, top, width, height }
 	 */
 	GetPosition(options) {return}
 
 	/**
 	 * Get distance to the upper parent border
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetTop(options) {return}
@@ -13088,7 +13089,7 @@ class DsWebView {
 
 	/**
 	 * Get the width of the control
-	 * @param {"px"} options 
+	 * @param {"px"} [options] 
 	 * @return {num} 
 	 */
 	GetWidth(options) {return}
