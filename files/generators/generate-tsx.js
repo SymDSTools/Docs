@@ -406,7 +406,7 @@ function makeType(inpt, state, stypes, tsx = false) {
 
                     type.desc = types.descs && "<br>" + types.descs;
                     if (type.sub === "str_com")
-                        type.sub = `string | (${tdesc.join("|")})[]`;
+                        type.sub = `str_com | (${tdesc.join("|")})[]`;
                     else
                         type.sub = tdesc.join("|");
 

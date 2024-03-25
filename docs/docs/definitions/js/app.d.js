@@ -38,7 +38,7 @@ class DsApp {
 	 * @param {DsLayout} layout 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
+	 * @param {str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
  	 * &emsp; `fix` - image with fixed resolution\
  	 * &emsp; `px` - use pixel values for size\
  	 * &emsp; `Button` - causes image to depress like a button when touched\
@@ -89,7 +89,7 @@ class DsApp {
 	 * @param {str_ptf} file 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
+	 * @param {str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
  	 * &emsp; `px` - use pixel values for size\
  	 * &emsp; `Button` - causes image to depress like a button when touched\
  	 * &emsp; `async` - loads the image asynchronously\
@@ -118,7 +118,7 @@ class DsApp {
 	 * @param {str_lst} list 
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[]} [options=''] <br>
+	 * @param {str_com | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[]} [options=''] <br>
  	 * &emsp; `bold` - bold item titles\
  	 * &emsp; `Expand` - Expand list to full height inside scrollers\
  	 * &emsp; `Menu` - applies various settings to make the list appear like an in-app menu\
@@ -133,7 +133,7 @@ class DsApp {
 	 * @param {DsLayout} layout 
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]} [options] 
+	 * @param {str_com | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]} [options] 
 	 * @return {DsScroller} 
 	 */
 	AddScroller(layout, width, height, options) {return}
@@ -175,7 +175,7 @@ class DsApp {
 	 * @param {str_com} list 
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]} [options] 
+	 * @param {str_com | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]} [options] 
 	 * @return {DsTabs} 
 	 */
 	AddTabs(list, width, height, options) {return}
@@ -263,7 +263,7 @@ class DsApp {
 	 * Shows a popup message with an 'OK' button to exit
 	 * @param {str} message 
 	 * @param {str} [title] 
-	 * @param {string | ("NoDim"|"NoFocus")[]} [options=''] 
+	 * @param {str_com | ("NoDim"|"NoFocus")[]} [options=''] 
 	 * @param {num_int} [hue] `-180..180`
 	 */
 	Alert(message, title, options, hue) {return}
@@ -334,7 +334,7 @@ class DsApp {
 	 * @param {str} type `file mimetype`
 	 * @param {(path: str_pth|str_uri, name: str) => void} callback 
 	 * @param {str_pth} [fldr] 
-	 * @param {string | ("persist"|"nodownload")[]} [options] <br>
+	 * @param {str_com | ("persist"|"nodownload")[]} [options] <br>
  	 * &emsp; `persist` - keep file permission after reboot\
  	 * &emsp; `nodownload` - prevents file downloads
 	 */
@@ -342,7 +342,7 @@ class DsApp {
 
 	/**
 	 * Let the user choose an image
-	 * @param {string | (""|"internal"|"external")[]} options 
+	 * @param {str_com | (""|"internal"|"external")[]} options 
 	 * @param {(path: str_pth) => void} callback 
 	 */
 	ChooseImage(options, callback) {return}
@@ -352,7 +352,7 @@ class DsApp {
 	 * @param {str} title1 
 	 * @param {str} title2 
 	 * @param {(ssid: str) => void} callback 
-	 * @param {string | ("force"|"large")[]} [options=''] 
+	 * @param {str_com | ("force"|"large")[]} [options=''] 
 	 * @param {"ssids"} [extra] 
 	 */
 	ChooseWifi(title1, title2, callback, options, extra) {return}
@@ -449,7 +449,7 @@ class DsApp {
 	 * @param {str_ptc} file 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
+	 * @param {str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
  	 * &emsp; `fix` - image with fixed resolution\
  	 * &emsp; `px` - use pixel values for size\
  	 * &emsp; `Button` - causes image to depress like a button when touched\
@@ -516,7 +516,7 @@ class DsApp {
 	/**
 	 * Returns a new Dialog object to display messages
 	 * @param {str} title 
-	 * @param {string | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"Fillscreen"|"Fullscreen"|"TouchModal"|"NoTouch"|"Modal"|"Kiosk"|"Old")[]} [options] <br>
+	 * @param {str_com | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"Fillscreen"|"Fullscreen"|"TouchModal"|"NoTouch"|"Modal"|"Kiosk"|"Old")[]} [options] <br>
  	 * &emsp; `Old` - apply old list style affecting title style and unrounded corners
 	 * @return {DsDialog} 
 	 */
@@ -524,7 +524,7 @@ class DsApp {
 
 	/**
 	 * Returns a new Downloader object
-	 * @param {string | ("NoDialog"|"Light")[]} [options] 
+	 * @param {str_com | ("NoDialog"|"Light")[]} [options] 
 	 * @return {DsDownloader} 
 	 */
 	CreateDownloader(options) {return}
@@ -576,7 +576,7 @@ class DsApp {
 	 * @param {str_ptc} [file] 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
+	 * @param {str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[]} [options=''] <br>
  	 * &emsp; `fix` - image with fixed resolution\
  	 * &emsp; `px` - use pixel values for size\
  	 * &emsp; `Button` - causes image to depress like a button when touched\
@@ -605,7 +605,7 @@ class DsApp {
 	 * @param {str_com} list 
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[]} [options=''] <br>
+	 * @param {str_com | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[]} [options=''] <br>
  	 * &emsp; `bold` - bold item titles\
  	 * &emsp; `Expand` - Expand list to full height inside scrollers\
  	 * &emsp; `Menu` - applies various settings to make the list appear like an in-app menu\
@@ -626,7 +626,7 @@ class DsApp {
 
 	/**
 	 * Returns a new Locator object
-	 * @param {string | ("GPS"|"Network")[]} type 
+	 * @param {str_com | ("GPS"|"Network")[]} type 
 	 * @param {str_com} [options] 
 	 * @return {DsLocator} 
 	 */
@@ -663,7 +663,7 @@ class DsApp {
 	/**
 	 * Creates a NodeJS background process with all the functionality of common node.js
 	 * @param {str_pth} [paths] `NODE_PATH env variable`
-	 * @param {string | ("extended"|"legacy"|"nostart"|"esm")[]} [options] <br>
+	 * @param {str_com | ("extended"|"legacy"|"nostart"|"esm")[]} [options] <br>
  	 * &emsp; `extended` - allow app methods in default main instance\
  	 * &emsp; `legacy` - dont use named pipes for messaging\
  	 * &emsp; `nostart` - disable auto start\
@@ -674,7 +674,7 @@ class DsApp {
 
 	/**
 	 * Returns a new Notification object
-	 * @param {string | ("Ongoing"|"AutoCancel"|"FullScreen"|"NoVibrate"|"Low")[]} [options] <br>
+	 * @param {str_com | ("Ongoing"|"AutoCancel"|"FullScreen"|"NoVibrate"|"Low")[]} [options] <br>
  	 * &emsp; `Low` - priority
 	 * @return {DsNotification} 
 	 */
@@ -690,7 +690,7 @@ class DsApp {
 	/**
 	 * Returns a new Overlay object
 	 * @premium
-	 * @param {string | ("ShowWhenLocked"|"TurnScreenOn"|"KeepScreenOn")[]} [options] 
+	 * @param {str_com | ("ShowWhenLocked"|"TurnScreenOn"|"KeepScreenOn")[]} [options] 
 	 * @return {DsOverlay} 
 	 */
 	CreateOverlay(options) {return}
@@ -712,7 +712,7 @@ class DsApp {
 	 * Returns a new Scroller object
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]} [options] 
+	 * @param {str_com | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]} [options] 
 	 * @return {DsScroller} 
 	 */
 	CreateScroller(width, height, options) {return}
@@ -729,7 +729,7 @@ class DsApp {
 	/**
 	 * Returns a new Sensor object
 	 * @param {"Accelerometer"|"MagneticField"|"Orientation"|"Light"|"Proximity"|"Temperature"|"GameRotation"|"GeomagneticRotation"|"Gravity"|"Gyroscope"|"HeartRate"|"Acceleration"|"Pressure"|"Humidity"|"RotationMotion"|"StepCounter"|"StepDetector"} type 
-	 * @param {string | ("Slow"|"Medium"|"Fast"|"Fastest")[]} [options] 
+	 * @param {str_com | ("Slow"|"Medium"|"Fast"|"Fastest")[]} [options] 
 	 * @return {DsSensor} 
 	 */
 	CreateSensor(type, options) {return}
@@ -739,7 +739,7 @@ class DsApp {
 	 * @param {str} packageName `this`, `<package>`
 	 * @param {str} className `this`, `<class>`
 	 * @param {(this: DsService) => void} [callback] 
-	 * @param {string | ("Persist")[]} [options] <br>
+	 * @param {str_com | ("Persist")[]} [options] <br>
  	 * &emsp; `Persist` - attempts to force restart if service killed
 	 * @return {DsService} 
 	 */
@@ -750,7 +750,7 @@ class DsApp {
 	 * @param {str} name 
 	 * @param {str_ptf} iconFile 
 	 * @param {str_ptf} file 
-	 * @param {string | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]} [options] <br>
+	 * @param {str_com | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]} [options] <br>
  	 * &emsp; `Debug` - start app in debug mode\
  	 * &emsp; `Game` - runs in GameView mode
 	 * @return {nil} 
@@ -766,7 +766,7 @@ class DsApp {
 
 	/**
 	 * Returns a new SpeechRec object
-	 * @param {string | ("NoBeep"|"Partial")[]} [options] 
+	 * @param {str_com | ("NoBeep"|"Partial")[]} [options] 
 	 * @return {DsSpeechRec} 
 	 */
 	CreateSpeechRec(options) {return}
@@ -793,7 +793,7 @@ class DsApp {
 
 	/**
 	 * Returns a new Synth object
-	 * @param {string | ("Signal"|"VCA"|"VCF")[]} [type='Signal'] 
+	 * @param {str_com | ("Signal"|"VCA"|"VCF")[]} [type='Signal'] 
 	 * @return {DsSynth} 
 	 */
 	CreateSynth(type) {return}
@@ -803,7 +803,7 @@ class DsApp {
 	 * @param {"sh"|"su"|"busybox"} cmd program name
 	 * @param {str} [env] 
 	 * @param {str_ptd} [dir] 
-	 * @param {string | ("combine"|"builder")[]} [options] <br>
+	 * @param {str_com | ("combine"|"builder")[]} [options] <br>
  	 * &emsp; `combine` - combines stdout and stderr\
  	 * &emsp; `builder` - force use of proc builder
 	 * @return {DsSysProc} 
@@ -815,7 +815,7 @@ class DsApp {
 	 * @param {str_com} list 
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
-	 * @param {string | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]} [options] 
+	 * @param {str_com | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]} [options] 
 	 * @return {DsTabs} 
 	 */
 	CreateTabs(list, width, height, options) {return}
@@ -952,7 +952,7 @@ class DsApp {
 	 * @param {num_frc} [width=-1] 
 	 * @param {num_frc} [height=-1] 
 	 * @param {(this: DsWizard, layout: DsLayout, page: num_int) => void} [callback] 
-	 * @param {string | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"TouchModal"|"NoTouch")[]} [options] 
+	 * @param {str_com | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"TouchModal"|"NoTouch")[]} [options] 
 	 * @return {DsWizard} 
 	 */
 	CreateWizard(title, width, height, callback, options) {return}
@@ -960,7 +960,7 @@ class DsApp {
 	/**
 	 * Returns a new YesNoDialog object
 	 * @param {str} message 
-	 * @param {string | ("NoDim"|"NoFocus"|"TouchModal")[]} [options] 
+	 * @param {str_com | ("NoDim"|"NoFocus"|"TouchModal")[]} [options] 
 	 * @return {DsYesNoDialog} 
 	 */
 	CreateYesNoDialog(message, options) {return}
@@ -1074,7 +1074,7 @@ class DsApp {
 	 * @param {str_pth} source 
 	 * @param {str_pth} destination 
 	 * @param {bin} [overwrite=false] 
-	 * @param {string | ("DoEvents"|"shallow")[]} [options] <br>
+	 * @param {str_com | ("DoEvents"|"shallow")[]} [options] <br>
  	 * &emsp; `DoEvents` - extract in background\
  	 * &emsp; `shallow` - extract top level
 	 */
@@ -1227,7 +1227,7 @@ class DsApp {
 
 	/**
 	 * Returns the current active debug switches
-	 * @return {string | ("console"|"ds"|"adb"|"all")[]} 
+	 * @return {str_com | ("console"|"ds"|"adb"|"all")[]} 
 	 */
 	GetDebug() {return}
 
@@ -1390,7 +1390,7 @@ class DsApp {
 	/**
 	 * Returns a string list of metadata values contained in an audio file
 	 * @param {str_ptf} file 
-	 * @param {string | ("album"|"artist"|"genre"|"title"|"composer"|"author"|"duration"|"bitrate"|"width"|"height")[]} [keys] 
+	 * @param {str_com | ("album"|"artist"|"genre"|"title"|"composer"|"author"|"duration"|"bitrate"|"width"|"height")[]} [keys] 
 	 * @return {str_com} 
 	 */
 	GetMetadata(file, keys) {return}
@@ -1421,7 +1421,7 @@ class DsApp {
 
 	/**
 	 * Get app options
-	 * @return {string | ("portrait"|"landscape"|"dark"|"light"|"holo"|"node"|"hybrid"|"mui"|"transparent"|"debug"|"remote"|"noswapify")[]} 
+	 * @return {str_com | ("portrait"|"landscape"|"dark"|"light"|"holo"|"node"|"hybrid"|"mui"|"transparent"|"debug"|"remote"|"noswapify")[]} 
 	 */
 	GetOptions() {return}
 
@@ -1862,7 +1862,7 @@ class DsApp {
 	 * @param {str_pth} path `must not have a trailing slash`
 	 * @param {str} [filter] 
 	 * @param {num_int} [limit] 
-	 * @param {string | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]} [options] <br>
+	 * @param {str_com | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]} [options] <br>
  	 * &emsp; `Alphasort` - sorts the paths in alphabetical order\
  	 * &emsp; `FullPath` - returns absolute paths to the listed items\
  	 * &emsp; `RegEx` - accepts regexp patterns\
@@ -2036,7 +2036,7 @@ class DsApp {
 	 * Quit the app with showing a dialog and exit after closing
 	 * @param {str} msg 
 	 * @param {str} [title] 
-	 * @param {string | ("NoDim"|"NoFocus")[]} [options] 
+	 * @param {str_com | ("NoDim"|"NoFocus")[]} [options] 
 	 */
 	Quit(msg, title, options) {return}
 
@@ -2202,7 +2202,7 @@ class DsApp {
 	 * @param {str_uri} [uri] 
 	 * @param {str_mim} [type] 
 	 * @param {str|{ name: str, type: "string"|"float"|"int"|"long"|"bool"|"list"|"file"|"uri"|"keydown"|"keyup", value: str }[]} [extras] 
-	 * @param {string | ("Result"|"ClearTask")[]} [options=''] <br>
+	 * @param {str_com | ("Result"|"ClearTask")[]} [options=''] <br>
  	 * &emsp; `Result` - expect a result to be passed to the callback function
 	 * @param {(resultCode: -1|0|1, data?: { action: str, type: str, data: str, flags: num_int, extras: obj }) => void} [callback] 
 	 */
@@ -2247,7 +2247,7 @@ class DsApp {
 	 * @param {(id: str|num_int) => void} [callback] 
 	 * @param {num_dat} [time] 
 	 * @param {num_mls} [interval] 
-	 * @param {string | ("ExactIdle"|"Exact"|"App")[]} [options] <br>
+	 * @param {str_com | ("ExactIdle"|"Exact"|"App")[]} [options] <br>
  	 * &emsp; `Exact` - only works for single shot alarms\
  	 * &emsp; `App` - Opens main app if called from a service
 	 */
@@ -2306,7 +2306,7 @@ class DsApp {
 
 	/**
 	 * Control the debug level of the program
-	 * @param {string | ("console"|"ds"|"adb"|"all")[]} switches 
+	 * @param {str_com | ("console"|"ds"|"adb"|"all")[]} switches 
 	 */
 	SetDebug(switches) {return}
 
@@ -2351,7 +2351,7 @@ class DsApp {
 
 	/**
 	 * Set options for the connected joystick
-	 * @param {string | ("ForwardKeys")[]} [options] <br>
+	 * @param {str_com | ("ForwardKeys")[]} [options] <br>
  	 * &emsp; `ForwardKeys` - allows the joystick key presses to pass onto the child controls of the main activity
 	 */
 	SetJoystickOptions(options) {return}
@@ -2360,11 +2360,11 @@ class DsApp {
 	 * Blocks android functionality outside your app
 	 * @premium
 	 * @xfeature
-	 * @param {string | ("Power"|"Status"|"Nav"|"NavRight"|"LockTask"|"Pin")[]} mode <br>
+	 * @param {str_com | ("Power"|"Status"|"Nav"|"NavRight"|"LockTask"|"Pin")[]} mode <br>
  	 * &emsp; `LockTask` - COSU kiosk\
  	 * &emsp; `Pin` - task un-/pinning
 	 * @param {bin} [enable] 
-	 * @param {string | ("Black"|"Tasks")[]} [options=''] <br>
+	 * @param {str_com | ("Black"|"Tasks")[]} [options=''] <br>
  	 * &emsp; `Tasks` - prevents recent tasks button working
 	 * @param {str} [packages] 
 	 */
@@ -2442,7 +2442,7 @@ class DsApp {
 
 	/**
 	 * Define global app options
-	 * @param {string | ("UseBrowser"|"NoKeys"|"ShowKeys"|"NoPause"|"NoThemeAlerts"|"IgnoreSslErrors"|"TouchModal"|"NoCors"|"NoTouch"|"NoFocus"|"Secure"|"ShowLocked"|"WakeScreen"|"ScreenOn")[]} [options] <br>
+	 * @param {str_com | ("UseBrowser"|"NoKeys"|"ShowKeys"|"NoPause"|"NoThemeAlerts"|"IgnoreSslErrors"|"TouchModal"|"NoCors"|"NoTouch"|"NoFocus"|"Secure"|"ShowLocked"|"WakeScreen"|"ScreenOn")[]} [options] <br>
  	 * &emsp; `NoPause` - dont pause when not in foreground
 	 */
 	SetOptions(options) {return}
@@ -2604,14 +2604,14 @@ class DsApp {
 	/**
 	 * Show a popup message
 	 * @param {str} message 
-	 * @param {string | ("Bottom"|"Short"|"Long")[]} [options] 
+	 * @param {str_com | ("Bottom"|"Short"|"Long")[]} [options] 
 	 */
 	ShowPopup(message, options) {return}
 
 	/**
 	 * Show a progress indicator
 	 * @param {str} [message] 
-	 * @param {string | ("NoDim"|"NonModal"|"Solid")[]} [options] <br>
+	 * @param {str_com | ("NoDim"|"NonModal"|"Solid")[]} [options] <br>
  	 * &emsp; `NoDim` - Don't darken background\
  	 * &emsp; `NonModal` - allow background touch\
  	 * &emsp; `Solid` - shows solid background behind spinner
@@ -2692,7 +2692,7 @@ class DsApp {
 	/**
 	 * Starts an app in a new window
 	 * @param {str_ptf} file 
-	 * @param {string | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]} [options=''] <br>
+	 * @param {str_com | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]} [options=''] <br>
  	 * &emsp; `Debug` - start app in debug mode\
  	 * &emsp; `Game` - runs in GameView mode
 	 * @param {str} [intent] `{ action`, ` type`, ` data`, ` extras }`
@@ -2836,7 +2836,7 @@ class DsApp {
 	 * @param {str_pth} path 
 	 * @param {str} [filter] 
 	 * @param {num_int} [limit] 
-	 * @param {string | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]} [options] <br>
+	 * @param {str_com | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]} [options] <br>
  	 * &emsp; `Alphasort` - sorts the paths in alphabetical order\
  	 * &emsp; `FullPath` - returns absolute paths to the listed items\
  	 * &emsp; `RegEx` - accepts regexp patterns\
@@ -5199,7 +5199,7 @@ class DsDialog {
 	/**
 	 * Change height of the title bar for "Old" dialogs
 	 * @param {num_pxl} height 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [options] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [options] 
 	 */
 	SetTitleHeight(height, options) {return}
 
@@ -6673,7 +6673,7 @@ class DsImage {
 	 * @param {str_b64} data `<rawbase64>`, `data:image/jpg;base64,<jpgbase64>`, `data:image/png;base64,<pngbase64>`
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("px"|"icon"|"resize"|"rescale"|"square"|"fix")[]} [options] <br>
+	 * @param {str_com | ("px"|"icon"|"resize"|"rescale"|"square"|"fix")[]} [options] <br>
  	 * &emsp; `fix` - set bitmap size
 	 */
 	SetPixelData(data, width, height, options) {return}
@@ -7439,7 +7439,7 @@ class DsList {
 	 * @param {num_frc} icon 
 	 * @param {num_frc} title 
 	 * @param {num_frc} [body] 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
 	 */
 	SetColumnWidths(icon, title, body, mode) {return}
 
@@ -7504,14 +7504,14 @@ class DsList {
 	 * @param {num_frc} [top=0] 
 	 * @param {num_frc} [right=0] 
 	 * @param {num_frc} [bottom=0] 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
 	 */
 	SetIconMargins(left, top, right, bottom, mode) {return}
 
 	/**
 	 * Change the icon size
 	 * @param {num} size 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
 	 */
 	SetIconSize(size, mode) {return}
 
@@ -7683,14 +7683,14 @@ class DsList {
 	/**
 	 * Set title text size
 	 * @param {num} size 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
 	 */
 	SetTextSize1(size, mode) {return}
 
 	/**
 	 * Set body text size
 	 * @param {num} size 
-	 * @param {string | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
+	 * @param {str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]} [mode='px'] 
 	 */
 	SetTextSize2(size, mode) {return}
 
@@ -8028,7 +8028,7 @@ class DsMediaStore {
 	/**
 	 * Search for media
 	 * @param {str_sql} [filter] 
-	 * @param {string | ("title"|"_id"|"duration"|"size"|"uri"|"album"|"albumID"|"artist"|"artistId")[]} [sort] coloumns
+	 * @param {str_com | ("title"|"_id"|"duration"|"size"|"uri"|"album"|"albumID"|"artist"|"artistId")[]} [sort] coloumns
 	 * @param {"internal"|"external"} [options] 
 	 */
 	QueryMedia(filter, sort, options) {return}
@@ -8168,7 +8168,7 @@ class DsNetClient {
 
 	/**
 	 * Send bytes over TCP connection
-	 * @param {num_byt[]|string | ("bytes")[]} data <br>
+	 * @param {num_byt[]|str_com | ("bytes")[]} data <br>
  	 * &emsp; `bytes` - hexadecimal 00..FF
 	 * @param {"Int"|"Hex"} [mode] 
 	 */
@@ -10556,7 +10556,7 @@ class DsSysProc {
 	/**
 	 * Read from stderr
 	 * @param {num_int} maxLines 
-	 * @param {string | ("nowait")[]} [options] <br>
+	 * @param {str_com | ("nowait")[]} [options] <br>
  	 * &emsp; `nowait` - dont wait for input
 	 */
 	Err(maxLines, options) {return}
@@ -10570,7 +10570,7 @@ class DsSysProc {
 	/**
 	 * Read from stdin
 	 * @param {num_int} maxLines 
-	 * @param {string | ("nowait")[]} [options] <br>
+	 * @param {str_com | ("nowait")[]} [options] <br>
  	 * &emsp; `nowait` - dont wait for input
 	 */
 	In(maxLines, options) {return}
@@ -11138,7 +11138,7 @@ class DsText {
 	/**
 	 * Append line to the text
 	 * @param {str} message 
-	 * @param {string | ("Clear"|"Red"|"Green"|"Blue")[]} [options] <br>
+	 * @param {str_com | ("Clear"|"Red"|"Green"|"Blue")[]} [options] <br>
  	 * &emsp; `Clear` - Clears the log before writing
 	 */
 	Log(message, options) {return}
@@ -11932,7 +11932,7 @@ class DsTheme {
 
 	/**
 	 * Define progress options
-	 * @param {string | ("NoDim"|"NonModal"|"Solid")[]} [options] 
+	 * @param {str_com | ("NoDim"|"NonModal"|"Solid")[]} [options] 
 	 */
 	SetProgressOptions(options) {return}
 
@@ -11982,14 +11982,14 @@ class DsTheme {
 	/**
 	 * Define title height
 	 * @param {num_pxl} [height=-1] 
-	 * @param {string | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]} [options] 
+	 * @param {str_com | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]} [options] 
 	 */
 	SetTitleHeight(height, options) {return}
 
 	/**
 	 * Define title text size
 	 * @param {num} size 
-	 * @param {string | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]} [options] 
+	 * @param {str_com | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]} [options] 
 	 */
 	SetTitleTextSize(size, options) {return}
 }
@@ -13666,7 +13666,7 @@ class DsZipUtil {
 	 * @param {str} packageName 
 	 * @param {str} appName 
 	 * @param {str_com} [permissions] 
-	 * @param {string | ("Launch"|"Debug")[]} [options] 
+	 * @param {str_com | ("Launch"|"Debug")[]} [options] 
 	 */
 	UpdateManifest(fileIn, fileOut, packageName, appName, permissions, options) {return}
 }

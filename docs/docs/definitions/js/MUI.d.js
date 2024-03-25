@@ -35,7 +35,7 @@ class DsMUI {
 	 * @param {str} [p1] `Title text`, `Hint`
 	 * @param {str} [p2] `Material Icon`
 	 * @param {"controls"|"color"} [p3] 
-	 * @param {string | ("Elegant"|"Modern"|"Default"|"Round"|"Rectangle")[]} [options] <br>
+	 * @param {str_com | ("Elegant"|"Modern"|"Default"|"Round"|"Rectangle")[]} [options] <br>
  	 * &emsp; `Rectangle` - for Modern Appbar
 	 * @return {MuiAppBar} 
 	 */
@@ -240,7 +240,7 @@ class DsMUI {
 	 * @param {lst} values An array of strings of the form Val1:Val2:Val3...
 	 * @param {num} [width=-1] `Fraction of the screen width`
 	 * @param {num} [height=-1] `Fraction of the screen height`
-	 * @param {string | ("Selectable")[]} [options] 
+	 * @param {str_com | ("Selectable")[]} [options] 
 	 * @return {MuiDataTable} 
 	 */
 	AddDataTable(parent, columns, values, width, height, options) {return}
@@ -280,7 +280,7 @@ class DsMUI {
 	 * @param {DsLayout} parent 
 	 * @param {str} [icon] `Material icon fonts`
 	 * @param {str_col} [color] 
-	 * @param {string | ("outline"|"elegant"|"default")[]} [options] 
+	 * @param {str_com | ("outline"|"elegant"|"default")[]} [options] 
 	 * @return {MuiFAB} 
 	 */
 	AddFAB(parent, icon, color, options) {return}
@@ -319,7 +319,7 @@ class DsMUI {
 	 * @param {str} list 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("simple"|"modern"|"default"|"divider")[]} [options] 
+	 * @param {str_com | ("simple"|"modern"|"default"|"divider")[]} [options] 
 	 * @return {MuiList} 
 	 */
 	AddList(parent, list, width, height, options) {return}
@@ -330,7 +330,7 @@ class DsMUI {
 	 * @param {str} title 
 	 * @param {lst} list An array of objects
 	 * @param {str_col} [color] 
-	 * @param {string | ("CheckList"|"ListDialog"|"Bottom")[]} [options] 
+	 * @param {str_com | ("CheckList"|"ListDialog"|"Bottom")[]} [options] 
 	 * @return {MuiListDialog} 
 	 */
 	AddListDialog(parent, title, list, color, options) {return}
@@ -359,7 +359,7 @@ class DsMUI {
 
 	/**
 	 * Adds a simple menu
-	 * @param {string | ("list")[]} list 
+	 * @param {str_com | ("list")[]} list 
 	 * @param {num_frc} [width] 
 	 * @param {num_frc} [height] 
 	 * @param {"Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"} [position] 
@@ -399,10 +399,10 @@ class DsMUI {
 	/**
 	 * Adds a radio material input
 	 * @param {DsLayout} parent 
-	 * @param {string | ("strings")[]} list 
+	 * @param {str_com | ("strings")[]} list 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("Buttons"|"Material"|"Normal")[]} [options] 
+	 * @param {str_com | ("Buttons"|"Material"|"Normal")[]} [options] 
 	 * @param {"color"|"orientation"} [p1] 
 	 * @param {str_col} [color] 
 	 * @param {str_col} [backColor] 
@@ -472,7 +472,7 @@ class DsMUI {
 	/**
 	 * Adds an MUI tab on a given layout
 	 * @param {DsLayout} parent 
-	 * @param {string | ("titles")[]} title 
+	 * @param {str_com | ("titles")[]} title 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
 	 * @param {str_com} [options] `DS layout options`, `Fix`
@@ -577,7 +577,7 @@ class DsMUI {
 	 * @param {DsLayout} parent 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
-	 * @param {string | ("filled"|"outline"|"active")[]} [options] 
+	 * @param {str_com | ("filled"|"outline"|"active")[]} [options] 
 	 * @param {str} [hint] `Hint text`
 	 * @param {bin} [label] `Show or hide label`
 	 * @param {str_col} [color] 
@@ -1052,7 +1052,7 @@ class DsMUI {
 	 * @param {lst} values An array of strings of the form Val1:Val2:Val3...
 	 * @param {num} [width=-1] `Fraction of the screen width`
 	 * @param {num} [height=-1] `Fraction of the screen height`
-	 * @param {string | ("Selectable")[]} [options] 
+	 * @param {str_com | ("Selectable")[]} [options] 
 	 * @return {MuiDataTable} 
 	 */
 	CreateDataTable(columns, values, width, height, options) {return}
@@ -1160,7 +1160,7 @@ class DsMUI {
 
 	/**
 	 * Creates a simple menu
-	 * @param {string | ("list")[]} list 
+	 * @param {str_com | ("list")[]} list 
 	 * @param {num_frc} [width] 
 	 * @param {num_frc} [height] 
 	 * @param {"Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"} [position] 
@@ -1192,7 +1192,7 @@ class DsMUI {
 
 	/**
 	 * Creates a radio control. A radio control allows the user to select only one item in a list
-	 * @param {string | ("strings")[]} list 
+	 * @param {str_com | ("strings")[]} list 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
 	 * @param {str_col} [color] 
@@ -1265,7 +1265,7 @@ class DsMUI {
 
 	/**
 	 * Creates a simple fixed tab
-	 * @param {string | ("titles")[]} title 
+	 * @param {str_com | ("titles")[]} title 
 	 * @param {num} [width=-1] 
 	 * @param {num} [height=-1] 
 	 * @param {str_com} [options] `DS layout options`

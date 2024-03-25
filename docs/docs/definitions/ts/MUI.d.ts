@@ -32,7 +32,7 @@ declare class DsMUI {
 	 * @param options <br>
  	 * &emsp; `Rectangle` - for Modern Appbar
 	 */
-	AddAppBar(parent: DsLayout, p1?: str, p2?: str, p3?: "controls"|"color", options?: string | ("Elegant"|"Modern"|"Default"|"Round"|"Rectangle")[]): MuiAppBar;
+	AddAppBar(parent: DsLayout, p1?: str, p2?: str, p3?: "controls"|"color", options?: str_com | ("Elegant"|"Modern"|"Default"|"Round"|"Rectangle")[]): MuiAppBar;
 
 	/**
 	 * Adds an elegant appbar on a given layout
@@ -120,7 +120,7 @@ declare class DsMUI {
 	 * @param width `Fraction of the screen width`
 	 * @param height `Fraction of the screen height`
 	 */
-	AddDataTable(parent: DsLayout, columns: lst, values: lst, width?: num, height?: num, options?: string | ("Selectable")[]): MuiDataTable;
+	AddDataTable(parent: DsLayout, columns: lst, values: lst, width?: num, height?: num, options?: str_com | ("Selectable")[]): MuiDataTable;
 
 	/**
 	 * Adds a date picker dialog
@@ -146,7 +146,7 @@ declare class DsMUI {
 	 * Adds a floating action button
 	 * @param icon `Material icon fonts`
 	 */
-	AddFAB(parent: DsLayout, icon?: str, color?: str_col, options?: string | ("outline"|"elegant"|"default")[]): MuiFAB;
+	AddFAB(parent: DsLayout, icon?: str, color?: str_col, options?: str_com | ("outline"|"elegant"|"default")[]): MuiFAB;
 
 	/**
 	 * Adds an elegant floating action button
@@ -167,13 +167,13 @@ declare class DsMUI {
 	AddLayout(parent: DsLayout, type: "Linear"|"Absolute"|"Frame"|"Card", options?: str): DsLayout;
 
 	/** Adds an MUI control on a given layout */
-	AddList(parent: DsLayout, list: str, width?: num, height?: num, options?: string | ("simple"|"modern"|"default"|"divider")[]): MuiList;
+	AddList(parent: DsLayout, list: str, width?: num, height?: num, options?: str_com | ("simple"|"modern"|"default"|"divider")[]): MuiList;
 
 	/**
 	 * Adds a more customizable list dialog or checklist dialog
 	 * @param list An array of objects
 	 */
-	AddListDialog(parent: DsTextEdit, title: str, list: lst, color?: str_col, options?: string | ("CheckList"|"ListDialog"|"Bottom")[]): MuiListDialog;
+	AddListDialog(parent: DsTextEdit, title: str, list: lst, color?: str_col, options?: str_com | ("CheckList"|"ListDialog"|"Bottom")[]): MuiListDialog;
 
 	/**
 	 * Adds a ListModern control on a given layout
@@ -185,7 +185,7 @@ declare class DsMUI {
 	AddListSimple(parent: DsLayout, list: { title: str, icon: str, color: str_col, badge: num }, width?: num_frc, height?: num_frc, options?: "Divider"): MuiListSimple;
 
 	/** Adds a simple menu */
-	AddMenu(list: string | ("list")[], width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenu;
+	AddMenu(list: str_com | ("list")[], width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenu;
 
 	/** MUI menu with material icon font */
 	AddMenuWithIcon(list: str, width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenuWithIcon;
@@ -203,7 +203,7 @@ declare class DsMUI {
 	AddPicker(parent: DsTextEdit, options?: "Date"|"Color"|"Time"): MuiPicker;
 
 	/** Adds a radio material input */
-	AddRadio(parent: DsLayout, list: string | ("strings")[], width?: num, height?: num, options?: string | ("Buttons"|"Material"|"Normal")[], p1?: "color"|"orientation", color?: str_col, backColor?: str_col): MuiRadio;
+	AddRadio(parent: DsLayout, list: str_com | ("strings")[], width?: num, height?: num, options?: str_com | ("Buttons"|"Material"|"Normal")[], p1?: "color"|"orientation", color?: str_col, backColor?: str_col): MuiRadio;
 
 	/**
 	 * Adds a radio button control
@@ -234,7 +234,7 @@ declare class DsMUI {
 	 * Adds an MUI tab on a given layout
 	 * @param options `DS layout options`, `Fix`
 	 */
-	AddTabs(parent: DsLayout, title: string | ("titles")[], width?: num, height?: num, options?: str_com, color?: str_col, animation?: bin): MuiTabs;
+	AddTabs(parent: DsLayout, title: str_com | ("titles")[], width?: num, height?: num, options?: str_com, color?: str_col, animation?: bin): MuiTabs;
 
 	/**
 	 * Adds a filled text input with icon on the left
@@ -297,7 +297,7 @@ declare class DsMUI {
 	 * @param hint `Hint text`
 	 * @param label `Show or hide label`
 	 */
-	AddTextArea(parent: DsLayout, width?: num, height?: num, options?: string | ("filled"|"outline"|"active")[], hint?: str, label?: bin, color?: str_col, backColor?: str_col): MuiTextArea;
+	AddTextArea(parent: DsLayout, width?: num, height?: num, options?: str_com | ("filled"|"outline"|"active")[], hint?: str, label?: bin, color?: str_col, backColor?: str_col): MuiTextArea;
 
 	/**
 	 * Add a material filled textarea on a given layout
@@ -551,7 +551,7 @@ declare class DsMUI {
 	 * @param width `Fraction of the screen width`
 	 * @param height `Fraction of the screen height`
 	 */
-	CreateDataTable(columns: lst, values: lst, width?: num, height?: num, options?: string | ("Selectable")[]): MuiDataTable;
+	CreateDataTable(columns: lst, values: lst, width?: num, height?: num, options?: str_com | ("Selectable")[]): MuiDataTable;
 
 	/**
 	 * Creates a materialize date picker dialog
@@ -616,7 +616,7 @@ declare class DsMUI {
 	CreateListSimple(list: { title: str, icon: str, color: str_col, badge: num }, width?: num_frc, height?: num_frc, options?: "Divider"): MuiListSimple;
 
 	/** Creates a simple menu */
-	CreateMenu(list: string | ("list")[], width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenu;
+	CreateMenu(list: str_com | ("list")[], width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenu;
 
 	/** Advance MUI implementation of material design menu with additional icon using material icon font */
 	CreateMenuWithIcon(list: str, width?: num_frc, height?: num_frc, position?: "Top"|"Left"|"Top"|"Right"|"Bottom"|"Left"|"Bottom"|"Right"): MuiMenuWithIcon;
@@ -631,7 +631,7 @@ declare class DsMUI {
 	CreateModal(title: str, body: str, okTxt?: str, cancelTxt?: str, show?: bin, options?: str): MuiModal;
 
 	/** Creates a radio control. A radio control allows the user to select only one item in a list */
-	CreateRadio(list: string | ("strings")[], width?: num, height?: num, color?: str_col): MuiRadio;
+	CreateRadio(list: str_com | ("strings")[], width?: num, height?: num, color?: str_col): MuiRadio;
 
 	/**
 	 * Creates a radio button control
@@ -668,7 +668,7 @@ declare class DsMUI {
 	 * Creates a simple fixed tab
 	 * @param options `DS layout options`
 	 */
-	CreateTabFixed(title: string | ("titles")[], width?: num, height?: num, options?: str_com, color?: str_col, animation?: bin): MuiTabFixed;
+	CreateTabFixed(title: str_com | ("titles")[], width?: num, height?: num, options?: str_com, color?: str_col, animation?: bin): MuiTabFixed;
 
 	/**
 	 * Creates a filled text input with icon on the left

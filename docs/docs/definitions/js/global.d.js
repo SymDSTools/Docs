@@ -313,7 +313,7 @@ class Dside {
 	 * Obfuscate a javascript source file
 	 * @param {str_pth} src 
 	 * @param {str_pth} desc 
-	 * @param {string | ("NoSwap")[]} options <br>
+	 * @param {str_com | ("NoSwap")[]} options <br>
  	 * &emsp; `NoSwap` - Dont swap function names
 	 */
 	Obfuscate(src, desc, options) {return}

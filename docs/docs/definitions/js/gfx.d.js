@@ -68,7 +68,7 @@ class DsGfx {
 	/**
 	 * Returns a new background
 	 * @param {str_ptf} file 
-	 * @param {string | ("stretch")[]} options 
+	 * @param {str_com | ("stretch")[]} options 
 	 * @return {GfxBackground} 
 	 */
 	CreateBackground(file, options) {return}
@@ -179,7 +179,7 @@ class DsGfx {
 	/**
 	 * Enclose an area with a physics fence
 	 * @param {str} groupId 
-	 * @param {string | ("left"|"top"|"right"|"bottom")[]} options 
+	 * @param {str_com | ("left"|"top"|"right"|"bottom")[]} options 
 	 * @param {num} [density] 
 	 * @param {num} [bounce] 
 	 * @param {num} [friction] 

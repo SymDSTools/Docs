@@ -275,7 +275,7 @@ declare class Dside {
 	 * @param options <br>
  	 * &emsp; `NoSwap` - Dont swap function names
 	 */
-	Obfuscate(src: str_pth, desc: str_pth, options: string | ("NoSwap")[]): void;
+	Obfuscate(src: str_pth, desc: str_pth, options: str_com | ("NoSwap")[]): void;
 
 	/** Export your Game as pure HTML project */
 	Export(type: "GameView"|"Html"|"Hybrid", src: str_pth, desc: str_pth): void;

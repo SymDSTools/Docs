@@ -29,7 +29,7 @@ declare class DsGfx {
 	aspect: num;
 
 	/** Returns a new background */
-	CreateBackground(file: str_ptf, options: string | ("stretch")[]): GfxBackground;
+	CreateBackground(file: str_ptf, options: str_com | ("stretch")[]): GfxBackground;
 
 	/** Creates a circle */
 	CreateCircle(width: num_frc, color: num_col, lineWidth: num_pxl, lineColor: num_col, lineAlpha: num_frc, group: str): GfxCircle;
@@ -68,7 +68,7 @@ declare class DsGfx {
 	EnablePhysics(enabled: bin): void;
 
 	/** Enclose an area with a physics fence */
-	Enclose(groupId: str, options: string | ("left"|"top"|"right"|"bottom")[], density?: num, bounce?: num, friction?: num, offset?: num): void;
+	Enclose(groupId: str, options: str_com | ("left"|"top"|"right"|"bottom")[], density?: num, bounce?: num, friction?: num, offset?: num): void;
 
 	/** Get joystick states */
 	GetJoystick(id: str): obj;

@@ -34,7 +34,7 @@ declare class DsApp {
  	 * &emsp; `Icon` - allows loading of app icons\
  	 * &emsp; `NoPlay` - prevent gifs from playing automatically
 	 */
-	AddCanvas(layout: DsLayout, width?: num, height?: num, options?: string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
+	AddCanvas(layout: DsLayout, width?: num, height?: num, options?: str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
 
 	/**
 	 * Create and add CheckBox to Layout
@@ -61,7 +61,7 @@ declare class DsApp {
  	 * &emsp; `Icon` - allows loading of app icons\
  	 * &emsp; `NoPlay` - prevent gifs from playing automatically
 	 */
-	AddImage(layout: DsLayout, file: str_ptf, width?: num, height?: num, options?: string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
+	AddImage(layout: DsLayout, file: str_ptf, width?: num, height?: num, options?: str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
 
 	/**
 	 * Adds a layout to the app
@@ -79,10 +79,10 @@ declare class DsApp {
  	 * &emsp; `Menu` - applies various settings to make the list appear like an in-app menu\
  	 * &emsp; `Horiz` - makes title and body text flow horizontally
 	 */
-	AddList(layout: DsLayout, list: str_lst, width?: num_frc, height?: num_frc, options?: string | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[], delim?: str): DsList;
+	AddList(layout: DsLayout, list: str_lst, width?: num_frc, height?: num_frc, options?: str_com | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[], delim?: str): DsList;
 
 	/** Create and add Scroller to Layout */
-	AddScroller(layout: DsLayout, width?: num_frc, height?: num_frc, options?: string | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]): DsScroller;
+	AddScroller(layout: DsLayout, width?: num_frc, height?: num_frc, options?: str_com | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]): DsScroller;
 
 	/**
 	 * Create and add SeekBar to Layout
@@ -103,7 +103,7 @@ declare class DsApp {
 	AddSwitch(layout: DsLayout, text: str, width?: num_frc, height?: num_frc, options?: str_com): DsSwitch;
 
 	/** Returns a new Tabs object */
-	AddTabs(list: str_com, width?: num_frc, height?: num_frc, options?: string | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]): DsTabs;
+	AddTabs(list: str_com, width?: num_frc, height?: num_frc, options?: str_com | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]): DsTabs;
 
 	/**
 	 * Create and add Text to Layout
@@ -161,7 +161,7 @@ declare class DsApp {
 	 * Shows a popup message with an 'OK' button to exit
 	 * @param hue `-180..180`
 	 */
-	Alert(message: str, title?: str, options?: string | ("NoDim"|"NoFocus")[], hue?: num_int): void;
+	Alert(message: str, title?: str, options?: str_com | ("NoDim"|"NoFocus")[], hue?: num_int): void;
 
 	/** Similar to setInterval */
 	Animate(callback?: (time: num_mls, dtime: num_mls) => void, fps?: num_fps): void;
@@ -206,13 +206,13 @@ declare class DsApp {
  	 * &emsp; `persist` - keep file permission after reboot\
  	 * &emsp; `nodownload` - prevents file downloads
 	 */
-	ChooseFile(message: str, type: str, callback: (path: str_pth|str_uri, name: str) => void, fldr?: str_pth, options?: string | ("persist"|"nodownload")[]): void;
+	ChooseFile(message: str, type: str, callback: (path: str_pth|str_uri, name: str) => void, fldr?: str_pth, options?: str_com | ("persist"|"nodownload")[]): void;
 
 	/** Let the user choose an image */
-	ChooseImage(options: string | (""|"internal"|"external")[], callback: (path: str_pth) => void): void;
+	ChooseImage(options: str_com | (""|"internal"|"external")[], callback: (path: str_pth) => void): void;
 
 	/** Let the user choose a WiFi network */
-	ChooseWifi(title1: str, title2: str, callback: (ssid: str) => void, options?: string | ("force"|"large")[], extra?: "ssids"): void;
+	ChooseWifi(title1: str, title2: str, callback: (ssid: str) => void, options?: str_com | ("force"|"large")[], extra?: "ssids"): void;
 
 	/** Clears saved web cookies */
 	ClearCookies(): void;
@@ -273,7 +273,7 @@ declare class DsApp {
  	 * &emsp; `Icon` - allows loading of app icons\
  	 * &emsp; `NoPlay` - prevent gifs from playing automatically
 	 */
-	CreateCanvas(file: str_ptc, width?: num, height?: num, options?: string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
+	CreateCanvas(file: str_ptc, width?: num, height?: num, options?: str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
 
 	/**
 	 * Returns a new CheckBox object
@@ -313,10 +313,10 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `Old` - apply old list style affecting title style and unrounded corners
 	 */
-	CreateDialog(title: str, options?: string | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"Fillscreen"|"Fullscreen"|"TouchModal"|"NoTouch"|"Modal"|"Kiosk"|"Old")[]): DsDialog;
+	CreateDialog(title: str, options?: str_com | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"Fillscreen"|"Fullscreen"|"TouchModal"|"NoTouch"|"Modal"|"Kiosk"|"Old")[]): DsDialog;
 
 	/** Returns a new Downloader object */
-	CreateDownloader(options?: string | ("NoDialog"|"Light")[]): DsDownloader;
+	CreateDownloader(options?: str_com | ("NoDialog"|"Light")[]): DsDownloader;
 
 	/**
 	 * Returns an Email object for user to send emails
@@ -350,7 +350,7 @@ declare class DsApp {
  	 * &emsp; `Icon` - allows loading of app icons\
  	 * &emsp; `NoPlay` - prevent gifs from playing automatically
 	 */
-	CreateImage(file?: str_ptc, width?: num, height?: num, options?: string | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
+	CreateImage(file?: str_ptc, width?: num, height?: num, options?: str_com | ("fix"|"alias"|"px"|"Button"|"ScaleCenter"|"async"|"FontAwesome"|"Resize"|"TouchThrough"|"Icon"|"wallpaper"|"NoPlay")[], pxw?: num_pxl, pxh?: num_pxl): DsImage;
 
 	/**
 	 * Returns a new Layout object
@@ -369,13 +369,13 @@ declare class DsApp {
  	 * &emsp; `Menu` - applies various settings to make the list appear like an in-app menu\
  	 * &emsp; `Horiz` - makes title and body text flow horizontally
 	 */
-	CreateList(list: str_com, width?: num_frc, height?: num_frc, options?: string | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[], delim?: str): DsList;
+	CreateList(list: str_com, width?: num_frc, height?: num_frc, options?: str_com | ("bold"|"Expand"|"Menu"|"Horiz"|"html"|"FontAwesome"|"monospace"|"Normal"|"WhiteGrad"|"BlackGrad"|"AlumButton"|"GreenButton"|"OrangeButton"|"NoSound")[], delim?: str): DsList;
 
 	/** Returns a new ListDialog object */
 	CreateListDialog(title: str, list: str, options?: "Multi"|"AutoCancel"): DsListDialog;
 
 	/** Returns a new Locator object */
-	CreateLocator(type: string | ("GPS"|"Network")[], options?: str_com): DsLocator;
+	CreateLocator(type: str_com | ("GPS"|"Network")[], options?: str_com): DsLocator;
 
 	/** Returns a new MediaPlayer object */
 	CreateMediaPlayer(): DsMediaPlayer;
@@ -404,14 +404,14 @@ declare class DsApp {
  	 * &emsp; `nostart` - disable auto start\
  	 * &emsp; `esm` - use EcmaScript-Modules
 	 */
-	CreateNode(paths?: str_pth, options?: string | ("extended"|"legacy"|"nostart"|"esm")[]): DsNode;
+	CreateNode(paths?: str_pth, options?: str_com | ("extended"|"legacy"|"nostart"|"esm")[]): DsNode;
 
 	/**
 	 * Returns a new Notification object
 	 * @param options <br>
  	 * &emsp; `Low` - priority
 	 */
-	CreateNotification(options?: string | ("Ongoing"|"AutoCancel"|"FullScreen"|"NoVibrate"|"Low")[]): DsNotification;
+	CreateNotification(options?: str_com | ("Ongoing"|"AutoCancel"|"FullScreen"|"NoVibrate"|"Low")[]): DsNotification;
 
 	/**
 	 * Returns a new Nxt object
@@ -423,7 +423,7 @@ declare class DsApp {
 	 * Returns a new Overlay object
 	 * @premium
 	 */
-	CreateOverlay(options?: string | ("ShowWhenLocked"|"TurnScreenOn"|"KeepScreenOn")[]): DsOverlay;
+	CreateOverlay(options?: str_com | ("ShowWhenLocked"|"TurnScreenOn"|"KeepScreenOn")[]): DsOverlay;
 
 	/** Returns a new PhoneState object */
 	CreatePhoneState(types: "CellLocation"|"DataConnection"|"DataActivity"|"CallState"|"ServiceState"|"SignalStrength"|"CallForwarding"|"MessageWaiting"): DsPhoneState;
@@ -432,7 +432,7 @@ declare class DsApp {
 	CreatePlayStore(): DsPlayStore;
 
 	/** Returns a new Scroller object */
-	CreateScroller(width?: num_frc, height?: num_frc, options?: string | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]): DsScroller;
+	CreateScroller(width?: num_frc, height?: num_frc, options?: str_com | ("FillX"|"FillY"|"FillXY"|"Horizontal"|"Vertical"|"NoScrollBar"|"ScrollFade")[]): DsScroller;
 
 	/**
 	 * Returns a new SeekBar object
@@ -441,7 +441,7 @@ declare class DsApp {
 	CreateSeekBar(width?: num_frc, height?: num_frc, options?: str_com): DsSeekBar;
 
 	/** Returns a new Sensor object */
-	CreateSensor(type: "Accelerometer"|"MagneticField"|"Orientation"|"Light"|"Proximity"|"Temperature"|"GameRotation"|"GeomagneticRotation"|"Gravity"|"Gyroscope"|"HeartRate"|"Acceleration"|"Pressure"|"Humidity"|"RotationMotion"|"StepCounter"|"StepDetector", options?: string | ("Slow"|"Medium"|"Fast"|"Fastest")[]): DsSensor;
+	CreateSensor(type: "Accelerometer"|"MagneticField"|"Orientation"|"Light"|"Proximity"|"Temperature"|"GameRotation"|"GeomagneticRotation"|"Gravity"|"Gyroscope"|"HeartRate"|"Acceleration"|"Pressure"|"Humidity"|"RotationMotion"|"StepCounter"|"StepDetector", options?: str_com | ("Slow"|"Medium"|"Fast"|"Fastest")[]): DsSensor;
 
 	/**
 	 * Returns a new Service object
@@ -450,7 +450,7 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `Persist` - attempts to force restart if service killed
 	 */
-	CreateService(packageName: str, className: str, callback?: (this: DsService) => void, options?: string | ("Persist")[]): DsService;
+	CreateService(packageName: str, className: str, callback?: (this: DsService) => void, options?: str_com | ("Persist")[]): DsService;
 
 	/**
 	 * Creates a Home-Screen shortcut to an app
@@ -458,7 +458,7 @@ declare class DsApp {
  	 * &emsp; `Debug` - start app in debug mode\
  	 * &emsp; `Game` - runs in GameView mode
 	 */
-	CreateShortcut(name: str, iconFile: str_ptf, file: str_ptf, options?: string | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]): nil;
+	CreateShortcut(name: str, iconFile: str_ptf, file: str_ptf, options?: str_com | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[]): nil;
 
 	/**
 	 * Returns a new SMS object to send and retreive SMS messages
@@ -467,7 +467,7 @@ declare class DsApp {
 	CreateSMS(): DsSMS;
 
 	/** Returns a new SpeechRec object */
-	CreateSpeechRec(options?: string | ("NoBeep"|"Partial")[]): DsSpeechRec;
+	CreateSpeechRec(options?: str_com | ("NoBeep"|"Partial")[]): DsSpeechRec;
 
 	/**
 	 * Returns a new Spinner object
@@ -482,7 +482,7 @@ declare class DsApp {
 	CreateSwitch(text: str, width?: num_frc, height?: num_frc, options?: str_com): DsSwitch;
 
 	/** Returns a new Synth object */
-	CreateSynth(type?: string | ("Signal"|"VCA"|"VCF")[]): DsSynth;
+	CreateSynth(type?: str_com | ("Signal"|"VCA"|"VCF")[]): DsSynth;
 
 	/**
 	 * Returns a new SysProc object
@@ -491,10 +491,10 @@ declare class DsApp {
  	 * &emsp; `combine` - combines stdout and stderr\
  	 * &emsp; `builder` - force use of proc builder
 	 */
-	CreateSysProc(cmd: "sh"|"su"|"busybox", env?: str, dir?: str_ptd, options?: string | ("combine"|"builder")[]): DsSysProc;
+	CreateSysProc(cmd: "sh"|"su"|"busybox", env?: str, dir?: str_ptd, options?: str_com | ("combine"|"builder")[]): DsSysProc;
 
 	/** Returns a new Tabs object */
-	CreateTabs(list: str_com, width?: num_frc, height?: num_frc, options?: string | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]): DsTabs;
+	CreateTabs(list: str_com, width?: num_frc, height?: num_frc, options?: str_com | ("Fade"|"FontAwesome"|"NoMargins"|"VCenter")[]): DsTabs;
 
 	/**
 	 * Returns a new Text object
@@ -588,10 +588,10 @@ declare class DsApp {
 	 * The wizard is supposed to simplify a configuration progress which requires several inputs and decisions by the user
 	 * @premium
 	 */
-	CreateWizard(title: str, width?: num_frc, height?: num_frc, callback?: (this: DsWizard, layout: DsLayout, page: num_int) => void, options?: string | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"TouchModal"|"NoTouch")[]): DsWizard;
+	CreateWizard(title: str, width?: num_frc, height?: num_frc, callback?: (this: DsWizard, layout: DsLayout, page: num_int) => void, options?: str_com | ("AutoCancel"|"NoCancel"|"NoTitle"|"NoFocus"|"NoDim"|"NoKeys"|"TouchModal"|"NoTouch")[]): DsWizard;
 
 	/** Returns a new YesNoDialog object */
-	CreateYesNoDialog(message: str, options?: string | ("NoDim"|"NoFocus"|"TouchModal")[]): DsYesNoDialog;
+	CreateYesNoDialog(message: str, options?: str_com | ("NoDim"|"NoFocus"|"TouchModal")[]): DsYesNoDialog;
 
 	/** Returns a new ZipUtil object */
 	CreateZipUtil(mode: str): DsZipUtil;
@@ -650,7 +650,7 @@ declare class DsApp {
  	 * &emsp; `DoEvents` - extract in background\
  	 * &emsp; `shallow` - extract top level
 	 */
-	ExtractAssets(source: str_pth, destination: str_pth, overwrite?: bin, options?: string | ("DoEvents"|"shallow")[]): void;
+	ExtractAssets(source: str_pth, destination: str_pth, overwrite?: bin, options?: str_com | ("DoEvents"|"shallow")[]): void;
 
 	/** Forcefully update your plugins */
 	ExtractPlugins(): void;
@@ -731,7 +731,7 @@ declare class DsApp {
 	GetDatabaseFolder(): str_pth;
 
 	/** Returns the current active debug switches */
-	GetDebug(): string | ("console"|"ds"|"adb"|"all")[];
+	GetDebug(): str_com | ("console"|"ds"|"adb"|"all")[];
 
 	/** Get devces default orientation */
 	GetDefaultOrientation(): "Portrait"|"Landscape";
@@ -830,7 +830,7 @@ declare class DsApp {
 	GetMemoryInfo(): { avail: num_byt, low: bin, threshold: num_byt, total: num_byt };
 
 	/** Returns a string list of metadata values contained in an audio file */
-	GetMetadata(file: str_ptf, keys?: string | ("album"|"artist"|"genre"|"title"|"composer"|"author"|"duration"|"bitrate"|"width"|"height")[]): str_com;
+	GetMetadata(file: str_ptf, keys?: str_com | ("album"|"artist"|"genre"|"title"|"composer"|"author"|"duration"|"bitrate"|"width"|"height")[]): str_com;
 
 	/** Get device model name */
 	GetModel(): str;
@@ -845,7 +845,7 @@ declare class DsApp {
 	GetObjects(): dso[];
 
 	/** Get app options */
-	GetOptions(): string | ("portrait"|"landscape"|"dark"|"light"|"holo"|"node"|"hybrid"|"mui"|"transparent"|"debug"|"remote"|"noswapify")[];
+	GetOptions(): str_com | ("portrait"|"landscape"|"dark"|"light"|"holo"|"node"|"hybrid"|"mui"|"transparent"|"debug"|"remote"|"noswapify")[];
 
 	/** Get current screen orientation */
 	GetOrientation(): "Portrait"|"Landscape";
@@ -1096,7 +1096,7 @@ declare class DsApp {
  	 * &emsp; `NoEmpty` - hide empty folders\
  	 * &emsp; `project` - Shows DS project folders only
 	 */
-	ListFolder(path: str_pth, filter?: str, limit?: num_int, options?: string | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]): str_pth[];
+	ListFolder(path: str_pth, filter?: str, limit?: num_int, options?: str_com | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]): str_pth[];
 
 	/** Returns a list of granted permissions
 	 * 
@@ -1180,7 +1180,7 @@ declare class DsApp {
 	QueryContent(uri: str_uri, columns: str_com, select?: str_sql, args?: str_lst, sort?: "coloumn"): any[];
 
 	/** Quit the app with showing a dialog and exit after closing */
-	Quit(msg: str, title?: str, options?: string | ("NoDim"|"NoFocus")[]): void;
+	Quit(msg: str, title?: str, options?: str_com | ("NoDim"|"NoFocus")[]): void;
 
 	/**
 	 * Read the content of a local file
@@ -1263,7 +1263,7 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `Result` - expect a result to be passed to the callback function
 	 */
-	SendIntent(packageName?: str, className?: str, action?: str, category?: str, uri?: str_uri, type?: str_mim, extras?: str|{ name: str, type: "string"|"float"|"int"|"long"|"bool"|"list"|"file"|"uri"|"keydown"|"keyup", value: str }[], options?: string | ("Result"|"ClearTask")[], callback?: (resultCode: -1|0|1, data?: { action: str, type: str, data: str, flags: num_int, extras: obj }) => void): void;
+	SendIntent(packageName?: str, className?: str, action?: str, category?: str, uri?: str_uri, type?: str_mim, extras?: str|{ name: str, type: "string"|"float"|"int"|"long"|"bool"|"list"|"file"|"uri"|"keydown"|"keyup", value: str }[], options?: str_com | ("Result"|"ClearTask")[], callback?: (resultCode: -1|0|1, data?: { action: str, type: str, data: str, flags: num_int, extras: obj }) => void): void;
 
 	/** Open the EMail app and autofill fields */
 	SendMail(address: str, subject?: str, body?: str, attach?: str_pth, type?: str_mim, options?: "SendTo"): void;
@@ -1283,7 +1283,7 @@ declare class DsApp {
  	 * &emsp; `Exact` - only works for single shot alarms\
  	 * &emsp; `App` - Opens main app if called from a service
 	 */
-	SetAlarm(type: "Set"|"Repeat"|"Cancel", id?: str|num_int, callback?: (id: str|num_int) => void, time?: num_dat, interval?: num_mls, options?: string | ("ExactIdle"|"Exact"|"App")[]): void;
+	SetAlarm(type: "Set"|"Repeat"|"Cancel", id?: str|num_int, callback?: (id: str|num_int) => void, time?: num_dat, interval?: num_mls, options?: str_com | ("ExactIdle"|"Exact"|"App")[]): void;
 
 	/** Load the language code from lang.json */
 	SetAppLanguage(name: str): void;
@@ -1316,7 +1316,7 @@ declare class DsApp {
 	SetData(name: str, value: str): void;
 
 	/** Control the debug level of the program */
-	SetDebug(switches: string | ("console"|"ds"|"adb"|"all")[]): void;
+	SetDebug(switches: str_com | ("console"|"ds"|"adb"|"all")[]): void;
 
 	/**
 	 * Control the debug level of the program
@@ -1347,7 +1347,7 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `ForwardKeys` - allows the joystick key presses to pass onto the child controls of the main activity
 	 */
-	SetJoystickOptions(options?: string | ("ForwardKeys")[]): void;
+	SetJoystickOptions(options?: str_com | ("ForwardKeys")[]): void;
 
 	/**
 	 * Blocks android functionality outside your app
@@ -1359,7 +1359,7 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `Tasks` - prevents recent tasks button working
 	 */
-	SetKioskMode(mode: string | ("Power"|"Status"|"Nav"|"NavRight"|"LockTask"|"Pin")[], enable?: bin, options?: string | ("Black"|"Tasks")[], packages?: str): void;
+	SetKioskMode(mode: str_com | ("Power"|"Status"|"Nav"|"NavRight"|"LockTask"|"Pin")[], enable?: bin, options?: str_com | ("Black"|"Tasks")[], packages?: str): void;
 
 	/** Set default margins */
 	SetMargins(left?: num, top?: num, right?: num, bottom?: num_frc, mode?: "px"|"sp"|"dip"|"mm"|"pt"): void;
@@ -1402,7 +1402,7 @@ declare class DsApp {
 	 * @param options <br>
  	 * &emsp; `NoPause` - dont pause when not in foreground
 	 */
-	SetOptions(options?: string | ("UseBrowser"|"NoKeys"|"ShowKeys"|"NoPause"|"NoThemeAlerts"|"IgnoreSslErrors"|"TouchModal"|"NoCors"|"NoTouch"|"NoFocus"|"Secure"|"ShowLocked"|"WakeScreen"|"ScreenOn")[]): void;
+	SetOptions(options?: str_com | ("UseBrowser"|"NoKeys"|"ShowKeys"|"NoPause"|"NoThemeAlerts"|"IgnoreSslErrors"|"TouchModal"|"NoCors"|"NoTouch"|"NoFocus"|"Secure"|"ShowLocked"|"WakeScreen"|"ScreenOn")[]): void;
 
 	/** Fix display orientation */
 	SetOrientation(orient: "Default"|"Landscape"|"ReverseLandscape"|"Portrait"|"ReversePortrait", callback?: () => void): void;
@@ -1498,7 +1498,7 @@ declare class DsApp {
 	ShowMenu(): void;
 
 	/** Show a popup message */
-	ShowPopup(message: str, options?: string | ("Bottom"|"Short"|"Long")[]): void;
+	ShowPopup(message: str, options?: str_com | ("Bottom"|"Short"|"Long")[]): void;
 
 	/**
 	 * Show a progress indicator
@@ -1507,7 +1507,7 @@ declare class DsApp {
  	 * &emsp; `NonModal` - allow background touch\
  	 * &emsp; `Solid` - shows solid background behind spinner
 	 */
-	ShowProgress(message?: str, options?: string | ("NoDim"|"NonModal"|"Solid")[]): void;
+	ShowProgress(message?: str, options?: str_com | ("NoDim"|"NonModal"|"Solid")[]): void;
 
 	/** Show a progress bar dialog */
 	ShowProgressBar(title: str, percent?: num_prc, options?: "Light"): void;
@@ -1540,7 +1540,7 @@ declare class DsApp {
  	 * &emsp; `Game` - runs in GameView mode
 	 * @param intent `{ action`, ` type`, ` data`, ` extras }`
 	 */
-	StartApp(file: str_ptf, options?: string | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[], intent?: str): void;
+	StartApp(file: str_ptf, options?: str_com | ("Portrait"|"Landscape"|"Transparent"|"Debug"|"Game"|"remote")[], intent?: str): void;
 
 	/** Start remote debug server */
 	StartDebugServer(): void;
@@ -1636,7 +1636,7 @@ declare class DsApp {
  	 * &emsp; `NoEmpty` - hide empty folders\
  	 * &emsp; `project` - Shows DS project folders only
 	 */
-	WalkFolder(path: str_pth, filter?: str, limit?: num_int, options?: string | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]): str_pth[];
+	WalkFolder(path: str_pth, filter?: str, limit?: num_int, options?: str_com | ("Alphasort"|"FullPath"|"RegEx"|"Folders"|"Files"|"NoEmpty"|"project")[]): str_pth[];
 
 	/** Connect to a WiFi network by specifying the ssid and a password */
 	WifiConnect(ssid: str, key: str): void;
@@ -2980,7 +2980,7 @@ declare class DsDialog {
 	SetTitleDividerHeight(height: num_pxl, options?: "px"|"sp"|"dip"|"mm"|"pt"): void;
 
 	/** Change height of the title bar for "Old" dialogs */
-	SetTitleHeight(height: num_pxl, options?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetTitleHeight(height: num_pxl, options?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Changes the title text size for "Old" dialogs */
 	SetTitleTextSize(size: num, options?: "px"|"sp"|"dip"|"mm"|"pt"): void;
@@ -3835,7 +3835,7 @@ declare class DsImage {
 	 * @param options <br>
  	 * &emsp; `fix` - set bitmap size
 	 */
-	SetPixelData(data: str_b64, width?: num, height?: num, options?: string | ("px"|"icon"|"resize"|"rescale"|"square"|"fix")[]): void;
+	SetPixelData(data: str_b64, width?: num, height?: num, options?: str_com | ("px"|"icon"|"resize"|"rescale"|"square"|"fix")[]): void;
 
 	/** Change the pixel mode for drawing methods */
 	SetPixelMode(onoff: bin): void;
@@ -4260,7 +4260,7 @@ declare class DsList {
 	SetColorFilter(color: str_col, mode?: "Add"|"Multiply"|"clear"|"darken"|"lighten"|"overlay"|"screen"|"xor"|"color"|"color_burn"|"color_dodge"|"difference"|"exclusion"|"hard_light"|"hue"|"luminosity"|"modulate"|"saturation"|"soft_light"|"src"|"dst"|"src_in"|"src_out"|"src_atop"|"src_over"|"dst_in"|"dst_out"|"dst_atop"|"dst_over"): void;
 
 	/** Change coloumn widths */
-	SetColumnWidths(icon: num_frc, title: num_frc, body?: num_frc, mode?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetColumnWidths(icon: num_frc, title: num_frc, body?: num_frc, mode?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Changes the divider style */
 	SetDivider(height: num_frc, color?: str_col): void;
@@ -4290,10 +4290,10 @@ declare class DsList {
 	SetHiTextColor2(color: str_col): void;
 
 	/** Change icon margins */
-	SetIconMargins(left?: num_frc, top?: num_frc, right?: num_frc, bottom?: num_frc, mode?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetIconMargins(left?: num_frc, top?: num_frc, right?: num_frc, bottom?: num_frc, mode?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Change the icon size */
-	SetIconSize(size: num, mode?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetIconSize(size: num, mode?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Change the content of an element by its title */
 	SetItem(title: str, newTitle: str, newBody?: str, newImage?: str_ptf): void;
@@ -4366,10 +4366,10 @@ declare class DsList {
 	SetTextSize(size: num, mode?: "px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps"): void;
 
 	/** Set title text size */
-	SetTextSize1(size: num, mode?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetTextSize1(size: num, mode?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Set body text size */
-	SetTextSize2(size: num, mode?: string | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
+	SetTextSize2(size: num, mode?: str_com | ("px"|"sp"|"dip"|"mm"|"pt")[]): void;
 
 	/** Change the visibility mode */
 	SetVisibility(mode: "Show"|"Hide"|"Gone"): void;
@@ -4597,7 +4597,7 @@ declare class DsMediaStore {
 	 * Search for media
 	 * @param sort coloumns
 	 */
-	QueryMedia(filter?: str_sql, sort?: string | ("title"|"_id"|"duration"|"size"|"uri"|"album"|"albumID"|"artist"|"artistId")[], options?: "internal"|"external"): void;
+	QueryMedia(filter?: str_sql, sort?: str_com | ("title"|"_id"|"duration"|"size"|"uri"|"album"|"albumID"|"artist"|"artistId")[], options?: "internal"|"external"): void;
 
 	/** Called when album query has finished */
 	SetOnAlbumsResult(callback: (this: DsMediaStore, result: { album: str, id: num_int, albumArt: str_pth, artist: str, numSongs: num_int, firstYear: str, lastYear: str }[]) => void): void;
@@ -4685,7 +4685,7 @@ declare class DsNetClient {
 	 * @param data <br>
  	 * &emsp; `bytes` - hexadecimal 00..FF
 	 */
-	SendBytes(data: num_byt[]|string | ("bytes")[], mode?: "Int"|"Hex"): void;
+	SendBytes(data: num_byt[]|str_com | ("bytes")[], mode?: "Int"|"Hex"): void;
 
 	/** Send an UDP Datagram */
 	SendDatagram(data: str, mode?: "US-ASCII"|"UTF-8"|"UTF-16LE"|"UTF-16BE"|"UTF-16", address?: str_url, port?: num_int, options?: "Text"|"Hex"|"Bytes"): void;
@@ -6134,7 +6134,7 @@ declare class DsSysProc {
 	 * @param options <br>
  	 * &emsp; `nowait` - dont wait for input
 	 */
-	Err(maxLines: num_int, options?: string | ("nowait")[]): void;
+	Err(maxLines: num_int, options?: str_com | ("nowait")[]): void;
 
 	/** Returns the control class name */
 	GetType(): "SysProc";
@@ -6144,7 +6144,7 @@ declare class DsSysProc {
 	 * @param options <br>
  	 * &emsp; `nowait` - dont wait for input
 	 */
-	In(maxLines: num_int, options?: string | ("nowait")[]): void;
+	In(maxLines: num_int, options?: str_com | ("nowait")[]): void;
 
 	/**
 	 * Access Java object methods via reflection
@@ -6467,7 +6467,7 @@ declare class DsText {
 	 * @param options <br>
  	 * &emsp; `Clear` - Clears the log before writing
 	 */
-	Log(message: str, options?: string | ("Clear"|"Red"|"Green"|"Blue")[]): void;
+	Log(message: str, options?: str_com | ("Clear"|"Red"|"Green"|"Blue")[]): void;
 
 	/**
 	 * Access Java object methods via reflection
@@ -6901,7 +6901,7 @@ declare class DsTheme {
 	SetProgressBackColor(color: str_col): void;
 
 	/** Define progress options */
-	SetProgressOptions(options?: string | ("NoDim"|"NonModal"|"Solid")[]): void;
+	SetProgressOptions(options?: str_com | ("NoDim"|"NonModal"|"Solid")[]): void;
 
 	/** Define progress bar options */
 	SetProgressBarOptions(options?: "Light"): void;
@@ -6925,10 +6925,10 @@ declare class DsTheme {
 	SetTitleDividerHeight(height?: num_pxl): void;
 
 	/** Define title height */
-	SetTitleHeight(height?: num_pxl, options?: string | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]): void;
+	SetTitleHeight(height?: num_pxl, options?: str_com | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]): void;
 
 	/** Define title text size */
-	SetTitleTextSize(size: num, options?: string | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]): void;
+	SetTitleTextSize(size: num, options?: str_com | ("px"|"dip"|"sp"|"mm"|"pt"|"pl"|"ps")[]): void;
 }
 
 
@@ -7949,7 +7949,7 @@ declare class DsZipUtil {
 	Sign(fileIn: str_ptf, fileOut: str_ptf, keyStore: str_pth, password: str): bin;
 
 	/** Update zip manifest */
-	UpdateManifest(fileIn: str_ptf, fileOut: str_ptf, packageName: str, appName: str, permissions?: str_com, options?: string | ("Launch"|"Debug")[]): void;
+	UpdateManifest(fileIn: str_ptf, fileOut: str_ptf, packageName: str, appName: str, permissions?: str_com, options?: str_com | ("Launch"|"Debug")[]): void;
 }
 
 
